@@ -1,0 +1,28 @@
+
+
+.dedicated-runner: &dedicated-runner
+  tags:
+  - dev-runner
+
+build_landing_stage:
+  <<: *dedicated-runner
+  stage: build
+  script:
+    - docker build -t landing:develop . 
+  only:
+    refs:
+    - develop 
+    changes:
+      - "landing/**/*"
+
+deploy_landing_stage:
+  <<: *dedicated-runner
+  stage: deploy
+  script:
+    - docker stop landing || true && docker rm landing || true
+    - docker run -d --name=landing -p 4999:3000 landing:develop
+  only:
+    refs:
+    - develop
+    changes:
+      - "landing/**/*"
