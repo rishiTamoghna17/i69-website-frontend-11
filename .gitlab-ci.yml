@@ -1,5 +1,4 @@
 
-
 .dedicated-runner: &dedicated-runner
   tags:
   - dev-runner
@@ -12,8 +11,7 @@ build_landing_stage:
   only:
     refs:
     - develop 
-    changes:
-      - "landing/**/*"
+
 
 deploy_landing_stage:
   <<: *dedicated-runner
@@ -24,5 +22,3 @@ deploy_landing_stage:
   only:
     refs:
     - develop
-    changes:
-      - "landing/**/*"
