@@ -24,9 +24,11 @@ import firebaseConfig from '../common/firebaseConfig';
 import "firebase/auth";
 import "firebase/database";
 import 'firebase/storage'
+import { useTranslation } from "react-i18next";
 
 const Profile = (props) => {
   const { classes } = props;
+  const { t } = useTranslation()
   const [state, setState] = useState({
     email: "",
     password: "",
@@ -192,7 +194,7 @@ const Profile = (props) => {
         >
           <FormControl fullWidth margin="normal">
             <InputLabel htmlFor="uname" className={classes.labels}>
-              User Name
+              {t('Profile.userName')}
             </InputLabel>
             <Input
               name="uname"
@@ -207,7 +209,7 @@ const Profile = (props) => {
 
           <FormControl fullWidth margin="normal">
             <InputLabel htmlFor="gender" className={classes.labels}>
-              Gender
+              {t('Profile.gender')}
             </InputLabel>
             <Input
               name="gender"
@@ -221,7 +223,7 @@ const Profile = (props) => {
           </FormControl>
           <FormControl fullWidth margin="normal">
             <InputLabel htmlFor="age" className={classes.labels}>
-              Age
+              {t('Profile.age')}
             </InputLabel>
             <Input
               name="age"
@@ -235,7 +237,7 @@ const Profile = (props) => {
           </FormControl>
           <FormControl fullWidth margin="normal">
             <InputLabel htmlFor="politics" className={classes.labels}>
-              Politics
+              {t('Profile.politics')}
             </InputLabel>
             <Input
               name="politics"
@@ -250,7 +252,7 @@ const Profile = (props) => {
 
           <FormControl fullWidth margin="normal">
             <InputLabel htmlFor="ethnicity" className={classes.labels}>
-              Ethnicity
+              {t('Profile.ethnicity')}
             </InputLabel>
             <Input
               name="ethnicity"
@@ -264,7 +266,7 @@ const Profile = (props) => {
           </FormControl>
           <FormControl fullWidth margin="normal">
             <InputLabel htmlFor="religiousBeliefs" className={classes.labels}>
-              ReligiousBeliefs
+              {t('Profile.religiousBeliefs')}
             </InputLabel>
             <Input
               name="religiousBeliefs"
@@ -278,7 +280,7 @@ const Profile = (props) => {
           </FormControl>
           <FormControl fullWidth margin="normal">
             <InputLabel htmlFor="zodiacSign" className={classes.labels}>
-              ZodiacSign
+              {t('Profile.zodiacSign')}
             </InputLabel>
             <Input
               name="zodiacSign"
@@ -292,7 +294,7 @@ const Profile = (props) => {
           </FormControl>
           <FormControl fullWidth margin="normal">
             <InputLabel htmlFor="height" className={classes.labels}>
-              Height
+              {t('Profile.height')}
             </InputLabel>
             <Input
               name="height"
@@ -306,7 +308,7 @@ const Profile = (props) => {
           </FormControl>
           <FormControl fullWidth margin="normal">
             <InputLabel htmlFor="familyPlans" className={classes.labels}>
-              FamilyPlans
+              {t('Profile.familyPlans')}
             </InputLabel>
             <Input
               name="familyPlans"
@@ -325,7 +327,7 @@ const Profile = (props) => {
             type="submit"
             onClick={updateProfile}
           >
-            Update Profile
+            {t('Profile.updateProfile')}
           </Button>
         </form>
 

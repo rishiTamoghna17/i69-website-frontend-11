@@ -2,8 +2,10 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 import { Grid } from '@material-ui/core'
 import TextTransition, { presets } from "react-text-transition";
+import { useTranslation } from "react-i18next";
 
 function Hero(props) {
+  const { t } = useTranslation()
   return (
     <Carousel
       animation={'slide'}
@@ -24,13 +26,13 @@ function Hero(props) {
               <div style={{ backgroundColor: '#caa943bf', marginLeft: 40 }}>
                 <h2>
                   <TextTransition
-                    text={'SEARCH FOR PEOPLE NEAR BY'}
+                    text={t('Welcomes')}
                     springConfig={presets.wobbly}
                     direction={'down'}
                   /></h2>
                 <h4 style={{ color: 'white', textAlign: 'center' }}>
                   <TextTransition
-                    text={'Meet and chat with people near by now!'}
+                    text={t('Home.meet')}
                     springConfig={presets.wobbly}
                     direction={'up'}
                   /></h4>
@@ -40,7 +42,7 @@ function Hero(props) {
             <Grid item xs={12} sm={4} >
               <img
                 src={'/images/i69-dating.png'}
-                alt="Search for people near by"
+                alt={t('Home.search')}
                 style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
               />
             </Grid>
@@ -63,14 +65,14 @@ function Hero(props) {
               <div style={{ marginLeft: 40 }}>
                 <h1 style={{ color: '#caa943bf', textAlign: 'center' }}>
                   <TextTransition
-                    text={'WELCOME TO i69'}
+                    text={t('Home.welcome')}
                     springConfig={presets.wobbly}
                     direction={'down'}
                   />
                 </h1>
                 <h4 style={{ color: '#caa943bf', textAlign: 'center' }}>
                   <TextTransition
-                    text={'BEST FREE DATING APP!'}
+                    text={t('Home.app')}
                     springConfig={presets.wobbly}
                     direction={'up'}
                   /></h4>
@@ -80,7 +82,7 @@ function Hero(props) {
             <Grid item xs={12} sm={4} >
               <img
                 src={'/images/i69-dating.png'}
-                alt="Best free dating app"
+                alt={t('Home.app')}
                 style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
               />
             </Grid>
@@ -103,14 +105,14 @@ function Hero(props) {
               <div style={{ marginLeft: 40 }}>
                 <h2 style={{ color: '#caa943bf', textAlign: 'center' }}>
                   <TextTransition
-                    text={'ADVANTAGES'}
+                    text={t('Home.advatages')}
                     springConfig={presets.wobbly}
                     direction={'up'}
                   />
                 </h2>
                 <h4 style={{ color: '#caa943bf', textAlign: 'center' }}>
                   <TextTransition
-                    text={'i69 IS the Best dating app ,  FREE app and SAFE  for dating'}
+                    text={t("Home.free")}
                     springConfig={presets.wobbly}
                     direction={'down'}
                   />
@@ -121,7 +123,7 @@ function Hero(props) {
             <Grid item xs={12} sm={4} >
               <img
                 src={'/images/i69-dating.png'}
-                alt='Advantages'
+                alt={t('Home.advatages')}
                 style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
               />
             </Grid>

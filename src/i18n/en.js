@@ -1,3 +1,3 @@
 export default {
-    'title': 'Learn React'
+    'search': 'SEARCH FOR PEOPLE NEAR BY'
 };

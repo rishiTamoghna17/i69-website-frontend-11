@@ -6,6 +6,7 @@ import ReactGA from 'react-ga';
 import '../src/assets/scss/style.scss'
 import { useRouter } from 'next/router';
 import { ReduxWrapper } from '../redux/store';
+import { appWithTranslation } from 'next-i18next';
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 
 const trackPage = page => {
@@ -36,4 +37,4 @@ const MyApp = ({ Component, pageProps }) => {
   );
 }
 
-export default ReduxWrapper.withRedux(MyApp)
+export default ReduxWrapper.withRedux(appWithTranslation(MyApp))
