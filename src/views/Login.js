@@ -23,6 +23,7 @@ import firebaseConfig from '../common/firebaseConfig';
 // Add the Firebase services that you want to use
 import "firebase/auth";
 import "firebase/firestore";
+import { useTranslation } from "react-i18next";
 class Login extends Component {
   state = {
     email: "",
@@ -225,6 +226,7 @@ class Login extends Component {
 
   render() {
     const { classes } = this.props;
+    const { t } = useTranslation()
     return (
       <div className={classes.main}>
         {/* <CssBaseline /> */}
@@ -237,7 +239,7 @@ class Login extends Component {
           >
             <FormControl required fullWidth margin="normal">
               <InputLabel htmlFor="email" className={classes.labels}>
-                Email
+                {t('Login.email')}
               </InputLabel>
               <Input
                 name="email"
@@ -251,7 +253,7 @@ class Login extends Component {
 
             <FormControl required fullWidth margin="normal">
               <InputLabel htmlFor="password" className={classes.labels}>
-                Password
+              {t('Login.Password')}
               </InputLabel>
               <Input
                 name="password"
@@ -292,7 +294,7 @@ class Login extends Component {
               type="submit"
               onClick={this.login}
             >
-              Login
+              {t('Login.Login')}
             </Button>
           </form>
 
@@ -304,7 +306,7 @@ class Login extends Component {
             type="submit"
             onClick={this.loginWithGoogle}
           >
-            Login with Google
+            {t('Login.loginGoogle')}
           </Button>
           <Button
             disableRipple
@@ -314,7 +316,8 @@ class Login extends Component {
             type="submit"
             onClick={this.loginWithFacebook}
           >
-            Login with Facebook
+            {t('Login.loginFacebook')}
+            
           </Button>
           <Button
             disableRipple
@@ -324,17 +327,17 @@ class Login extends Component {
             type="submit"
             onClick={this.loginWithTwitter}
           >
-            Login with Twitter
+            {t('Login.loginTwitter')}
           </Button>
 
           <p className="text-center my-3">
-            Don't have an account?{" "}
+          {t('Login.account')}{" "}
             <Link href="/signup" className="text-blue-500 hover:text-blue-600">
-              Sign up here
+            {t('Login.signupHere')}
             </Link>{" "}
             <br />{" "}
             <Link href="/reset" className="text-blue-500 hover:text-blue-600">
-              Forgot Password?
+            {t('Login.forgotPassword')}
             </Link>
           </p>
           {this.state.error ? (

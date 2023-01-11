@@ -24,6 +24,7 @@ import firebaseConfig from '../common/firebaseConfig';
 import "firebase/auth";
 import "firebase/database";
 import 'firebase/storage'
+import { useTranslation } from "react-i18next";
 
 class Registration extends Component {
   state = {
@@ -148,6 +149,7 @@ class Registration extends Component {
 
   render() {
     const { classes } = this.props;
+    const { t } = useTranslation()
     return (
       <div className={classes.main}>
         {/* <CssBaseline /> */}
@@ -177,7 +179,7 @@ class Registration extends Component {
           >
             <FormControl required fullWidth margin="normal">
               <InputLabel htmlFor="email" className={classes.labels}>
-                Email
+              {t('Registration.email')}
               </InputLabel>
               <Input
                 name="email"
@@ -191,7 +193,7 @@ class Registration extends Component {
 
             <FormControl required fullWidth margin="normal">
               <InputLabel htmlFor="password" className={classes.labels}>
-                Password
+              {t('Registration.password')}
               </InputLabel>
               <Input
                 name="password"
@@ -225,7 +227,7 @@ class Registration extends Component {
             </FormControl>
             <FormControl fullWidth margin="normal">
               <InputLabel htmlFor="uname" className={classes.labels}>
-                User Name
+              {t('Registration.userName')}
               </InputLabel>
               <Input
                 name="uname"
@@ -239,7 +241,7 @@ class Registration extends Component {
 
             <FormControl fullWidth margin="normal">
               <InputLabel htmlFor="gender" className={classes.labels}>
-                Gender
+              {t('Registration.gender')}
               </InputLabel>
               <Input
                 name="gender"
@@ -252,7 +254,7 @@ class Registration extends Component {
             </FormControl>
             <FormControl fullWidth margin="normal">
               <InputLabel htmlFor="age" className={classes.labels}>
-                Age
+              {t('Registration.age')}
               </InputLabel>
               <Input
                 name="age"
@@ -265,7 +267,7 @@ class Registration extends Component {
             </FormControl>
             <FormControl fullWidth margin="normal">
               <InputLabel htmlFor="politics" className={classes.labels}>
-                Politics
+              {t('Registration.politics')}
               </InputLabel>
               <Input
                 name="politics"
@@ -279,7 +281,7 @@ class Registration extends Component {
 
             <FormControl fullWidth margin="normal">
               <InputLabel htmlFor="ethnicity" className={classes.labels}>
-                Ethnicity
+              {t('Registration.ethnicity')}
               </InputLabel>
               <Input
                 name="ethnicity"
@@ -292,7 +294,7 @@ class Registration extends Component {
             </FormControl>
             <FormControl fullWidth margin="normal">
               <InputLabel htmlFor="religiousBeliefs" className={classes.labels}>
-                ReligiousBeliefs
+              {t('Registration.religiousBeliefs')}
               </InputLabel>
               <Input
                 name="religiousBeliefs"
@@ -305,7 +307,7 @@ class Registration extends Component {
             </FormControl>
             <FormControl fullWidth margin="normal">
               <InputLabel htmlFor="zodiacSign" className={classes.labels}>
-                ZodiacSign
+              {t('Registration.zodiacSign')}
               </InputLabel>
               <Input
                 name="zodiacSign"
@@ -318,7 +320,7 @@ class Registration extends Component {
             </FormControl>
             <FormControl fullWidth margin="normal">
               <InputLabel htmlFor="height" className={classes.labels}>
-                Height
+              {t('Registration.height')}
               </InputLabel>
               <Input
                 name="height"
@@ -331,7 +333,7 @@ class Registration extends Component {
             </FormControl>
             <FormControl fullWidth margin="normal">
               <InputLabel htmlFor="familyPlans" className={classes.labels}>
-                FamilyPlans
+              {t('Registration.familyPlans')}
               </InputLabel>
               <Input
                 name="familyPlans"
@@ -351,7 +353,7 @@ class Registration extends Component {
               type="submit"
               onClick={this.submitRegistration}
             >
-              Sign up
+              {t('Registration.signup')}
             </Button>
           </form>
 
