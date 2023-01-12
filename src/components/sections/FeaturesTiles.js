@@ -46,8 +46,8 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: 'SEARCH FOR PEOPLE NEARBY',
-    paragraph: 'or by distance!'
+    title: t('Home.peopleSearch'),
+    paragraph: t('Home.distance')
   };
 
   return (

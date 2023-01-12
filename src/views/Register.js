@@ -15,16 +15,15 @@ import ErrorIcon from "@material-ui/icons/Error";
 import VisibilityTwoToneIcon from "@material-ui/icons/VisibilityTwoTone";
 import VisibilityOffTwoToneIcon from "@material-ui/icons/VisibilityOffTwoTone";
 import CloseIcon from "@material-ui/icons/Close";
-import withFirebaseAuth from 'react-with-firebase-auth'
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
 import firebase from "firebase/app";
 import firebaseConfig from '../common/firebaseConfig';
+import { withTranslation } from "react-i18next";
 
 // Add the Firebase services that you want to use
 import "firebase/auth";
 import "firebase/database";
 import 'firebase/storage'
-import { useTranslation } from "react-i18next";
 
 class Registration extends Component {
   state = {
@@ -148,8 +147,7 @@ class Registration extends Component {
   };
 
   render() {
-    const { classes } = this.props;
-    const { t } = useTranslation()
+    const { classes,t } = this.props;
     return (
       <div className={classes.main}>
         {/* <CssBaseline /> */}
@@ -396,5 +394,5 @@ class Registration extends Component {
     );
   }
 }
-
-export default withStyles(register)(Registration);
+const signupComponent= withStyles(register)(Registration)
+export default withTranslation()(signupComponent);

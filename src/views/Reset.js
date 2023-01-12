@@ -23,7 +23,7 @@ import firebaseConfig from '../common/firebaseConfig';
 // Add the Firebase services that you want to use
 import "firebase/auth";
 import "firebase/firestore";
-import { useTranslation } from "react-i18next";
+import { useTranslation, withTranslation } from "react-i18next";
 class Reset extends Component {
   state = {
     email: "",
@@ -77,8 +77,7 @@ class Reset extends Component {
   };
 
   render() {
-    const { classes } = this.props;
-    const { t } = useTranslation()
+    const { classes,t } = this.props;
     return (
       <div className={classes.main}>
         {/* <CssBaseline /> */}
@@ -154,5 +153,5 @@ class Reset extends Component {
     );
   }
 }
-
-export default withStyles(register)(Reset);
+const resetComponents= withStyles(register)(Reset)
+export default withTranslation()(resetComponents) ;

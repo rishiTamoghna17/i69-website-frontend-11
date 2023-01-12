@@ -17,13 +17,13 @@ import VisibilityTwoToneIcon from "@material-ui/icons/VisibilityTwoTone";
 import VisibilityOffTwoToneIcon from "@material-ui/icons/VisibilityOffTwoTone";
 import CloseIcon from "@material-ui/icons/Close";
 import withFirebaseAuth from 'react-with-firebase-auth'
+import { withTranslation } from "react-i18next";
 import firebase from "firebase/app";
 import firebaseConfig from '../common/firebaseConfig';
 
 // Add the Firebase services that you want to use
 import "firebase/auth";
 import "firebase/firestore";
-import { useTranslation } from "react-i18next";
 class Login extends Component {
   state = {
     email: "",
@@ -226,7 +226,7 @@ class Login extends Component {
 
   render() {
     const { classes } = this.props;
-    const { t } = useTranslation()
+    const { t } = this.props
     return (
       <div className={classes.main}>
         {/* <CssBaseline /> */}
@@ -253,7 +253,7 @@ class Login extends Component {
 
             <FormControl required fullWidth margin="normal">
               <InputLabel htmlFor="password" className={classes.labels}>
-              {t('Login.Password')}
+              {t('Login.password')}
               </InputLabel>
               <Input
                 name="password"
@@ -294,7 +294,7 @@ class Login extends Component {
               type="submit"
               onClick={this.login}
             >
-              {t('Login.Login')}
+              {t('Login.login')}
             </Button>
           </form>
 
@@ -379,5 +379,5 @@ class Login extends Component {
     );
   }
 }
-
-export default withStyles(register)(Login);
+const loginComponent=withStyles(register)(Login)
+export default withTranslation()(loginComponent);

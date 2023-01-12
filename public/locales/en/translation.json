@@ -25,13 +25,15 @@
       "email":"Send request at: isixtyNine.adm@gmail.com",
       "attachCopy":"Attach copy of passport and/or valid id document , personnale infos for to receive a form to refil.",
       "filters":"FILTERS",
-     "all" :"on i69 All people look for different: some look for",
-     "seriousRelationship":"Serious Relationship , Some for Casual dating ,some for new friends, flirt , some for Roommates and some for Business Contacts.",
-     "searchScreen":"You will appear on appropriated search screen and you will be connected only to people with the same interests than you.",
-        "everyone":"How to please everyone?",
-        "advanceFilter":"Use advanced settings filters by dating purpose. Chat with people with the same goals.",
-        "newFriends":"Would you like to make new friends considering all your preferences?",
-        "filtersAppearance":"Use filters for appearance type, height range,age range, tags , family status, children and even sexual preferences…"                                                
+      "all" :"on i69 All people look for different: some look for",
+      "seriousRelationship":"Serious Relationship , Some for Casual dating ,some for new friends, flirt , some for Roommates and some for Business Contacts.",
+      "searchScreen":"You will appear on appropriated search screen and you will be connected only to people with the same interests than you.",
+      "everyone":"How to please everyone?",
+      "advanceFilter":"Use advanced settings filters by dating purpose. Chat with people with the same goals.",
+      "newFriends":"Would you like to make new friends considering all your preferences?",
+      "filtersAppearance":"Use filters for appearance type, height range,age range, tags , family status, children and even sexual preferences…",
+      "peopleSearch":"SEARCH FOR PEOPLE NEARBY",
+      "distance":"or by distance!"                                                
     },
     "Profile":{
       "userName":"User Name",
@@ -308,8 +310,7 @@
     },
     "Reset":{
       "email":"Email",
-      "resetLink":"Send me a reset link",
-      
+      "resetLink":"Send me a reset link"
     }
   }
   
