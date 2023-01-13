@@ -6,9 +6,10 @@ import Logo from './partials/Logo';
 import { useTranslation } from "react-i18next";
 import '../../services/localizationService';
 import I69Link from '../elements/i69Link';
-import { Button } from '@material-ui/core';
+import { Box, Button, FormControl, InputLabel, MenuItem, Select } from '@material-ui/core';
 import { logout_user } from '../../../redux/actions/user'
 import { connect } from 'react-redux';
+import { LanguageArray } from '../../utils/SectionProps';
 
 const propTypes = {
   navposition: PropTypes.string,
@@ -39,8 +40,15 @@ const Header = (props) => {
     bottomdivider,
     // ...props
   } = props
-  // redux action 
+  // redux action
+  const { i18n } = useTranslation()
   const [, forceUpdate] = useReducer(x => x + 1, 0);
+  const [language, setLanguage] = React.useState('');
+
+  const handleChange = (e) => {
+    setLanguage(e.target.value);
+    i18n.changeLanguage(e.target.value)
+  };
 
   const [isActive, setIsactive] = useState(false);
 
@@ -102,9 +110,9 @@ const Header = (props) => {
   }
 
   const classes = classNames(
-    'site-header',
-    bottomouterdivider && 'has-bottom-divider',
-    className
+      'site-header',
+      bottomouterdivider && 'has-bottom-divider',
+      className
   );
 
   const changeLanguage = (e) => {
@@ -113,23 +121,23 @@ const Header = (props) => {
 
   }
   return (
-    <header
-      {...props}
-      className={classes}
-    >
-      <div className="container">
-        <div className={
-          classNames(
-            'site-header-inner',
-            bottomdivider ? 'has-bottom-divider':''
-          )}>
-          <Logo />
-          {!hideNav &&
+      <header
+          {...props}
+          className={classes}
+      >
+        <div className="container">
+          <div className={
+            classNames(
+                'site-header-inner',
+                bottomdivider ? 'has-bottom-divider' : ''
+            )}>
+            <Logo />
+            {!hideNav &&
             <>
               <button
-                ref={hamburger}
-                className="header-nav-toggle"
-                onClick={isActive ? closeMenu : openMenu}
+                  ref={hamburger}
+                  className="header-nav-toggle"
+                  onClick={isActive ? closeMenu : openMenu}
               >
                 <span className="screen-reader">Menu</span>
                 <span className="hamburger">
@@ -137,17 +145,17 @@ const Header = (props) => {
                 </span>
               </button>
               <nav
-                ref={nav}
-                className={
-                  classNames(
-                    'header-nav',
-                    isActive && 'is-active'
-                  )}>
+                  ref={nav}
+                  className={
+                    classNames(
+                        'header-nav',
+                        isActive && 'is-active'
+                    )}>
                 <div className="header-nav-inner">
                   <ul className={
                     classNames(
-                      'list-reset text-xs',
-                      navposition && `header-nav-${navposition}`
+                        'list-reset text-xs',
+                        navposition && `header-nav-${navposition}`
                     )}>
                     <li>
                       <Button style={{ textTransform: 'initial' }} onClick={closeMenu}>
@@ -171,15 +179,15 @@ const Header = (props) => {
                     </li>
                   </ul>
                   {!hidesignin &&
-                    <ul
+                  <ul
                       className="list-reset header-nav-right"
-                    >
-                      <li>
-                        <Button style={{ textTransform: 'initial' }} onClick={closeMenu}>
-                          <I69Link href="/signin" className="button button-secondary button-wide-mobile button-sm">Login</I69Link>
-                        </Button>
-                      </li>
-                    </ul>
+                  >
+                    <li>
+                      <Button style={{ textTransform: 'initial' }} onClick={closeMenu}>
+                        <I69Link href="/signin" className="button button-secondary button-wide-mobile button-sm">Login</I69Link>
+                      </Button>
+                    </li>
+                  </ul>
 
                   }
                   {
@@ -192,29 +200,89 @@ const Header = (props) => {
                       </li>
                     </ul>
                   }{
-                    hidesignin && <ul
+                  hidesignin && <ul
                       className="list-reset header-nav-right"
-                    >
-                      <li>
-                        <I69Link href="/profile" className="button button-secondary button-wide-mobile button-sm">Profile</I69Link>
-                      </li>
-                    </ul>
-                  }
+                  >
+                    <li>
+                      <I69Link href="/profile" className="button button-secondary button-wide-mobile button-sm">Profile</I69Link>
+                    </li>
+                  </ul>
+                }
                   {!hidesignup &&
-                    <ul className="list-reset header-nav-right">
-                      <li>
-                        <Button style={{ textTransform: 'initial' }} onClick={closeMenu}>
-                          <I69Link href="/signup" className="button button-primary button-wide-mobile button-sm">Sign up</I69Link>
-                        </Button>
-                      </li>
-                    </ul>}
-
+                  <ul className="list-reset header-nav-right">
+                    <li>
+                      <Button style={{ textTransform: 'initial' }} onClick={closeMenu}>
+                        <I69Link href="/signup" className="button button-primary button-wide-mobile button-sm">Sign up</I69Link>
+                      </Button>
+                    </li>
+                  </ul>}
+                  <ul
+                      className="list-reset header-nav-right"
+                  >
+                    <li>
+                      <Box
+                          sx={{
+                            minWidth: 120,
+                            marginLeft: 20,
+                          }}
+                      >
+                        <FormControl
+                            fullWidth
+                            classes={{ root: "langBg", MuiInput: "123123" }}
+                        >
+                          <Select
+                              labelId="demo-simple-select-label"
+                              id="demo-simple-select1"
+                              value={language}
+                              label="Language"
+                              onChange={handleChange}
+                              classes={{
+                                root: "input-select",
+                                MuiInput: "112313",
+                              }}
+                              MenuProps={{
+                                className: "menu-outbox",
+                                MenuListProps: {
+                                  className: "213212313",
+                                  disablePadding: true,
+                                },
+                              }}
+                          >
+                            <MenuItem disabled selected value="Language">
+                              <em>Language</em>
+                            </MenuItem>
+                            {LanguageArray.map((i, index) => (
+                                <MenuItem key={index} value={i.label}>
+                                  <I69Link
+                                      className="dropDownMenuWrapper"
+                                      locale={i.label}
+                                      href=""
+                                  >
+                                    <img
+                                        loading="lazy"
+                                        src={i.image.src}
+                                        alt="flag"
+                                        style={{
+                                          height: 20,
+                                          width: 20,
+                                          marginRight: 10,
+                                        }}
+                                    />
+                                    {i.label}
+                                  </I69Link>
+                                </MenuItem>
+                            ))}
+                          </Select>
+                        </FormControl>
+                      </Box>
+                    </li>
+                  </ul>
                 </div>
               </nav>
             </>}
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
   );
 }
 
