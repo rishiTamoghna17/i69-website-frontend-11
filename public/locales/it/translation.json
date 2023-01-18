@@ -29,9 +29,19 @@
     "seriousRelationship": "Relazione seria, alcuni per appuntamenti casuali, alcuni per nuovi amici, flirt, alcuni per coinquilini e altri per contatti di lavoro.",
     "searchScreen": "Apparirai nella schermata di ricerca appropriata e sarai collegato solo a persone con i tuoi stessi interessi.",
     "everyone": "Come accontentare tutti?",
+    "peopleSearch": "CERCA PERSONE NELLE VICINANZE",
     "advanceFilter": "Utilizza i filtri delle impostazioni avanzate in base allo scopo della datazione. ",
     "newFriends": "Ti piacerebbe fare nuove amicizie considerando tutte le tue preferenze?",
-    "filtersAppearance": "Usa i filtri per tipo di aspetto, fascia di altezza, fascia di età, tag, stato di famiglia, bambini e persino preferenze sessuali..."
+    "filtersAppearance": "Usa i filtri per tipo di aspetto, fascia di altezza, fascia di età, tag, stato di famiglia, bambini e persino preferenze sessuali...",
+    "Menu": "Menù",
+    "Home": "Casa",
+    "FAQ": "FAQ",
+    "Policy": "Politica",
+    "Terms": "Termini",
+    "Login": "Login",
+    "Logout": "Disconnettersi",
+    "Profile": "Profilo",
+    "Signup": "Iscrizione"
   },
   "Profile": {
     "userName": "Nome utente",

@@ -31,7 +31,17 @@
     "everyone": "¿Cómo complacer a todos?",
     "advanceFilter": "Use filtros de configuración avanzada por propósito de citas. ",
     "newFriends": "¿Te gustaría hacer nuevos amigos teniendo en cuenta todas tus preferencias?",
-    "filtersAppearance": "Use filtros por tipo de apariencia, rango de altura, rango de edad, etiquetas, estado familiar, niños e incluso preferencias sexuales..."
+    "peopleSearch": "BUSCAR PERSONAS CERCANAS",
+    "filtersAppearance": "Use filtros por tipo de apariencia, rango de altura, rango de edad, etiquetas, estado familiar, niños e incluso preferencias sexuales...",
+    "Menu": "Menú",
+    "Home": "Casa",
+    "FAQ": "Preguntas más frecuentes",
+    "Policy": "Política",
+    "Terms": "Términos",
+    "Login": "Acceso",
+    "Logout": "Cerrar sesión",
+    "Profile": "Perfil",
+    "Signup": "Regístrate"
   },
   "Profile": {
     "userName": "Nombre de usuario",

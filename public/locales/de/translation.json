@@ -32,8 +32,17 @@
     "advanceFilter": "Verwenden Sie erweiterte Einstellungsfilter nach Dating-Zweck. ",
     "newFriends": "Möchten Sie neue Freunde unter Berücksichtigung all Ihrer Vorlieben finden?",
     "filtersAppearance": "Verwenden Sie Filter für Erscheinungstyp, Größenbereich, Altersbereich, Tags, Familienstand, Kinder und sogar sexuelle Vorlieben …",
-    "peopleSearch":"SUCHEN SIE NACH MENSCHEN IN DER NÄHE",
-    "distance":"oder per Ferne!"
+    "peopleSearch": "SUCHEN SIE NACH MENSCHEN IN DER NÄHE",
+    "distance": "oder per Ferne!",
+    "Menu": "Speisekarte",
+    "Home": "Heim",
+    "FAQ": "FAQ",
+    "Policy": "Politik",
+    "Terms": "Bedingungen",
+    "Login": "Anmeldung",
+    "Logout": "Ausloggen",
+    "Profile": "Profil",
+    "Signup": "Anmelden"
   },
   "Profile": {
     "userName": "Nutzername",

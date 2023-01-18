@@ -26,7 +26,7 @@ function Hero(props) {
               <div style={{ backgroundColor: '#caa943bf', marginLeft: 40 }}>
                 <h2>
                   <TextTransition
-                    text={t('Welcomes')}
+                    text={t('Home.welcome')}
                     springConfig={presets.wobbly}
                     direction={'down'}
                   /></h2>

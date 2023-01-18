@@ -42,7 +42,7 @@ const Header = (props) => {
     // ...props
   } = props
   // redux action
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const [, forceUpdate] = useReducer(x => x + 1, 0);
   const [language, setLanguage] = React.useState('');
 
@@ -73,6 +73,7 @@ const Header = (props) => {
 
   //   return () => window.removeEventListener('click', forceUpdate);
   // }, []);
+
 
   const openMenu = () => {
     document.body.classList.add('off-nav-is-active');
@@ -140,7 +141,7 @@ const Header = (props) => {
                 className="header-nav-toggle"
                 onClick={isActive ? closeMenu : openMenu}
               >
-                <span className="screen-reader">Menu</span>
+                <span className="screen-reader">{t('Home.Menu')}</span>
                 <span className="hamburger">
                   <span className="hamburger-inner"></span>
                 </span>
@@ -160,22 +161,22 @@ const Header = (props) => {
                     )}>
                     <li>
                       <Button style={{ textTransform: 'initial' }} onClick={closeMenu}>
-                        <Link href="/" >Home</Link>
+                        <Link href="/">{t('Home.Home')}</Link>
                       </Button>
                     </li>
                     <li>
                       <Button style={{ textTransform: 'initial' }} onClick={closeMenu}>
-                        <Link href="/faq" >FAQ</Link>
+                        <Link href="/faq">{t('Home.FAQ')}</Link>
                       </Button>
                     </li>
                     <li>
                       <Button style={{ textTransform: 'initial' }} onClick={closeMenu}>
-                        <Link href="/policy" >Policy</Link>
+                        <Link href="/policy">{t('Home.Policy')}</Link>
                       </Button>
                     </li>
                     <li>
                       <Button style={{ textTransform: 'initial' }} onClick={closeMenu}>
-                        <Link href="/terms">Terms</Link>
+                        <Link href="/terms">{t('Home.Terms')}</Link>
                       </Button>
                     </li>
                   </ul>
@@ -185,7 +186,7 @@ const Header = (props) => {
                     >
                       <li>
                         <Button style={{ textTransform: 'initial' }} onClick={closeMenu}>
-                          <I69Link href="/signin" className="button button-secondary button-wide-mobile button-sm">Login</I69Link>
+                          <I69Link href="/signin" className="button button-secondary button-wide-mobile button-sm">{t('Home.Login')}</I69Link>
                         </Button>
                       </li>
                     </ul>
@@ -195,7 +196,7 @@ const Header = (props) => {
                     hidesignin && <ul className="list-reset header-nav-right">
                       <li>
                         <Button style={{ textTransform: 'initial' }} onClick={logout}>
-                          <I69Link href="/" className="button button-secondary button-wide-mobile button-sm" >Logout</I69Link>
+                          <I69Link href="/" className="button button-secondary button-wide-mobile button-sm" > {t('Home.Logout')}</I69Link>
                         </Button>
                         {/* <Button className="button button-secondary button-wide-mobile button-sm" onClick={logout}>Logout</Button> */}
                       </li>
@@ -205,7 +206,7 @@ const Header = (props) => {
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <I69Link href="/profile" className="button button-secondary button-wide-mobile button-sm">Profile</I69Link>
+                        <I69Link href="/profile" className="button button-secondary button-wide-mobile button-sm"> {t('Home.Profile')}</I69Link>
                       </li>
                     </ul>
                   }
@@ -213,7 +214,7 @@ const Header = (props) => {
                     <ul className="list-reset header-nav-right">
                       <li>
                         <Button style={{ textTransform: 'initial' }} onClick={closeMenu}>
-                          <I69Link href="/signup" className="button button-primary button-wide-mobile button-sm">Sign up</I69Link>
+                          <I69Link href="/signup" className="button button-primary button-wide-mobile button-sm"> {t('Home.Signup')}</I69Link>
                         </Button>
                       </li>
                     </ul>}

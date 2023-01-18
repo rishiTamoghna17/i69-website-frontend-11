@@ -29,9 +29,19 @@
     "seriousRelationship": "Uhusiano Mzito , Baadhi kwa Uchumba wa Kawaida , zingine kwa marafiki wapya, kuchezea , zingine kwa Wanaoishi Chumbani na zingine kwa Anwani za Biashara.",
     "searchScreen": "Utaonekana kwenye skrini ya utafutaji iliyoratibiwa na utaunganishwa tu na watu wanaokuvutia sawa na wewe.",
     "everyone": "Jinsi ya kufurahisha kila mtu?",
+    "peopleSearch": "TAFUTA WATU WA KARIBU",
     "advanceFilter": "Tumia vichungi vya mipangilio ya hali ya juu kwa madhumuni ya kuchumbiana. ",
     "newFriends": "Je, ungependa kupata marafiki wapya ukizingatia mapendeleo yako yote?",
-    "filtersAppearance": "Tumia vichungi kwa aina ya mwonekano, urefu, safu ya umri, vitambulisho , hali ya familia, watoto na hata mapendeleo ya ngono..."
+    "filtersAppearance": "Tumia vichungi kwa aina ya mwonekano, urefu, safu ya umri, vitambulisho , hali ya familia, watoto na hata mapendeleo ya ngono...",
+    "Menu": "Menyu",
+    "Home": "Nyumbani",
+    "FAQ": "Maswali Yanayoulizwa Mara kwa Mara",
+    "Policy": "Sera",
+    "Terms": "Masharti",
+    "Login": "Ingia",
+    "Logout": "Ondoka",
+    "Profile": "Wasifu",
+    "Signup": "Jisajili"
   },
   "Profile": {
     "userName": "Jina la mtumiaji",
