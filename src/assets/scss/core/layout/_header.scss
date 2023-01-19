@@ -30,6 +30,7 @@
 	.header-nav-inner {
 		display: flex;
 		flex-grow: 1;
+		flex-wrap: wrap;
 	}
 
     ul {
@@ -63,9 +64,9 @@
 		}
     }
 
-	a.button {
-		margin-left: $header-nav--padding-h;
-	}
+	//a.button {
+	//	margin-left: $header-nav--padding-h;
+	//}
 }
 
 .header-nav-center:first-of-type {
@@ -139,6 +140,7 @@
 .dropDownMenuWrapper{
 	display: flex !important;
 	align-items: center;
+	padding: 0 7px !important;
 }
 .langBg {
 	background: #e6cd67;
