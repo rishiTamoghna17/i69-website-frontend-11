@@ -297,7 +297,7 @@ const Header = (props) => {
                               <MenuItem key={index} value={i.label}>
                                 <I69Link
                                   className="dropDownMenuWrapper"
-                                  locale={i.label}
+                                  locale={i.value}
                                   href=""
                                 >
                                   <Image
