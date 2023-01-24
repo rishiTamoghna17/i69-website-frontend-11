@@ -18,12 +18,14 @@ import VisibilityOffTwoToneIcon from "@material-ui/icons/VisibilityOffTwoTone";
 import CloseIcon from "@material-ui/icons/Close";
 import withFirebaseAuth from 'react-with-firebase-auth'
 import { withTranslation } from "react-i18next";
+import { withRouter } from 'next/router';
 import firebase from "firebase/app";
 import firebaseConfig from '../common/firebaseConfig';
 
 // Add the Firebase services that you want to use
 import "firebase/auth";
 import "firebase/firestore";
+import "firebase/database";
 class Login extends Component {
   state = {
     email: "",
@@ -31,7 +33,7 @@ class Login extends Component {
     passwordConfrim: "",
     hidePassword: true,
     error: null,
-    errorOpen: false
+    errorOpen: false,
   };
 
   errorClose = e => {
@@ -113,11 +115,11 @@ class Login extends Component {
         var user = result.user;
         console.log("sadfasdfasdf===>", user.uid)
         localStorage.setItem("uid", user.uid)
-        firebase.database().ref('users/' + user.uid).set({
+        firebase?.database()?.ref('users')?.child(user.uid).set({
           name: user.displayName,
         })
         alert('Login success!')
-        this.props.history.push('/')
+        this.props.router?.push('/')
         // ...
       }).catch((error) => {
         // Handle Errors here.
@@ -127,6 +129,7 @@ class Login extends Component {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
+        console.log('errorMessage', errorMessage)
         alert(errorMessage)
         // ...
       });
@@ -253,7 +256,7 @@ class Login extends Component {
 
             <FormControl required fullWidth margin="normal">
               <InputLabel htmlFor="password" className={classes.labels}>
-              {t('Login.password')}
+                {t('Login.password')}
               </InputLabel>
               <Input
                 name="password"
@@ -317,7 +320,7 @@ class Login extends Component {
             onClick={this.loginWithFacebook}
           >
             {t('Login.loginFacebook')}
-            
+
           </Button>
           <Button
             disableRipple
@@ -331,13 +334,13 @@ class Login extends Component {
           </Button>
 
           <p className="text-center my-3">
-          {t('Login.account')}{" "}
+            {t('Login.account')}{" "}
             <Link href="/signup" className="text-blue-500 hover:text-blue-600">
-            {t('Login.signupHere')}
+              {t('Login.signupHere')}
             </Link>{" "}
             <br />{" "}
             <Link href="/reset" className="text-blue-500 hover:text-blue-600">
-            {t('Login.forgotPassword')}
+              {t('Login.forgotPassword')}
             </Link>
           </p>
           {this.state.error ? (
@@ -379,5 +382,6 @@ class Login extends Component {
     );
   }
 }
-const loginComponent=withStyles(register)(Login)
+const loginRouter = withRouter(Login)
+const loginComponent = withStyles(register)(loginRouter)
 export default withTranslation()(loginComponent);

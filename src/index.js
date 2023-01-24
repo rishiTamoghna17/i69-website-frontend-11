@@ -8,7 +8,9 @@ import * as serviceWorker from './serviceWorker';
 import './assets/scss/style.scss';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import nextI18nextConfig from '../next-i18next.config';
-
+var firebase = require('firebase/app');
+require('firebase/auth');
+require('firebase/database');
 const history = createBrowserHistory();
 export async function getServerSideProps({locale}){
   if(locale){
