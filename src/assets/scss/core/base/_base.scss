@@ -125,3 +125,11 @@ td {
 		border-bottom: 1px solid color-border(divider-inverse);
 	}
 }
+
+.loaderWrapper{
+	display:flex;
+	align-items:center;
+	width: 100%;
+    justify-content: center;
+    min-height: calc(100vh - 301px);
+}
