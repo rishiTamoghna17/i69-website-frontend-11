@@ -26,6 +26,7 @@ import firebaseConfig from '../common/firebaseConfig';
 import "firebase/auth";
 import "firebase/firestore";
 import "firebase/database";
+import { loginWithFetch } from "../queris";
 class Login extends Component {
   state = {
     email: "",
@@ -108,18 +109,22 @@ class Login extends Component {
       .then((result) => {
         /** @type {firebase.auth.OAuthCredential} */
         var credential = result.credential;
-
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = credential.accessToken;
+        loginWithFetch({
+          accessToken: credential.idToken,
+          accessVerifier: "",
+          provider: credential.providerId
+        })
         // The signed-in user info.
         var user = result.user;
-        console.log("sadfasdfasdf===>", user.uid)
+        console.log("sadfasdfasdf===>", user)
         localStorage.setItem("uid", user.uid)
         firebase?.database()?.ref('users')?.child(user.uid).set({
           name: user.displayName,
         })
         alert('Login success!')
-        this.props.router?.push('/')
+        this.props.router?.push('/dashboard')
         // ...
       }).catch((error) => {
         // Handle Errors here.
@@ -201,7 +206,12 @@ class Login extends Component {
         // You can use these server side with your app's credentials to access the Twitter API.
         var token = credential.accessToken;
         var secret = credential.secret;
-
+        console.log('result', result)
+        loginWithFetch({
+          accessToken: credential.accessToken,
+          accessVerifier: credential.secret,
+          provider: 'twitter-oauth'
+        })
         // The signed-in user info.
         var user = result.user;
         console.log("sadfasdfasdf===>", user)
@@ -210,7 +220,7 @@ class Login extends Component {
           name: result.additionalUserInfo.profile.name,
         })
         alert('Login success!')
-        this.props.history.push('/')
+        this.props.router?.push('/dashboard')
         // ...
       }).catch((error) => {
         // Handle Errors here.
@@ -253,7 +263,6 @@ class Login extends Component {
                 onChange={this.handleChange("email")}
               />
             </FormControl>
-
             <FormControl required fullWidth margin="normal">
               <InputLabel htmlFor="password" className={classes.labels}>
                 {t('Login.password')}

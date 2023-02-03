@@ -1,9 +1,9 @@
 .site-header {
-	position: absolute !important;
+	//position: absolute !important;
 	top: 0;
 	width: 100%;
 	z-index: 10 !important;
-	background: color-bg(header);
+	background: #202427;
 
 	+ .site-content {
 
@@ -195,4 +195,3 @@
 		height: $header-height__desktop;
 	}
 }
-

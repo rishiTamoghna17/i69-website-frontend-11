@@ -8,8 +8,8 @@ function Hero(props) {
   const { t } = useTranslation()
   return (
     <Carousel
-      animation={'slide'}
-      interval={2000}
+    // animation={'slide'}
+    // interval={2000}
     >
       <div>
         <div style={{
