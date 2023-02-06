@@ -176,7 +176,7 @@ class Login extends Component {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
-        alert(errorMessage)
+        // alert(errorMessage)
         // ...
       });
 
@@ -207,20 +207,20 @@ class Login extends Component {
         var token = credential.accessToken;
         var secret = credential.secret;
         console.log('result', result)
+        // The signed-in user info.
+        var user = result.user;
+        console.log("sadfasdfasdf===>", user)
+        localStorage.setItem("uid", user.uid)
+        this.props.router?.push('/dashboard')
         loginWithFetch({
           accessToken: credential.accessToken,
           accessVerifier: credential.secret,
           provider: 'twitter-oauth'
         })
-        // The signed-in user info.
-        var user = result.user;
-        console.log("sadfasdfasdf===>", user)
-        localStorage.setItem("uid", user.uid)
         firebase.database().ref('users/' + user.uid).set({
           name: result.additionalUserInfo.profile.name,
         })
         alert('Login success!')
-        this.props.router?.push('/dashboard')
         // ...
       }).catch((error) => {
         // Handle Errors here.
@@ -230,7 +230,7 @@ class Login extends Component {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
-        alert(errorMessage)
+        // alert(errorMessage)
         // ...
       });
 
