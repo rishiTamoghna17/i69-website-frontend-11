@@ -319,5 +319,24 @@
   "Reset": {
     "email": "Barua pepe",
     "resetLink": "Nitumie kiungo cha kuweka upya"
+  },
+  "dashboard": {
+    "message": "UJUMBE",
+    "helene": "HELENE",
+    "coinsLeft": "SARAFU ZILIZOAchwa",
+    "enterMesssage": "Weka ujumbe",
+    "chatCoin": "NUNUA SARAFU YA MAZUNGUMZO",
+    "connection": "Lakini sarafu za i69 - fungua ulimwengu mpya wa unganisho"
+  },
+  "userProfile": {
+    "tresasure": "HAZINA",
+    "about": "KUHUSU",
+    "interest": "MASLAHI"
+  },
+  "search": {
+    "searchResult": "MATOKEO YA TAFUTA",
+    "random": "NAFASI",
+    "popular": "MAARUFU",
+    "mostActive": "INAENDELEA ZAIDI"
   }
 }

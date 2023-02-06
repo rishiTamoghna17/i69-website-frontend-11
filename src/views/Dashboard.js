@@ -7,13 +7,14 @@ import ReceivedMessage from "../components/sections/Chat/ReceivedMessage";
 import 'font-awesome/css/font-awesome.min.css';
 import Person4Icon from '@mui/icons-material/Person4';
 import MessageIcon from '@mui/icons-material/Message';
+import { useTranslation } from "react-i18next";
 const Dashboard = (props) => {
-
+  const { t } = useTranslation()
   return (
     <div>
       <div className="row m-0">
         <div className="col-4 user-list-parent px-0">
-          <div className="chat-headers msg-header">MESSAGES</div>
+          <div className="chat-headers msg-header">{t('dashboard.message')}</div>
           <div className="scr-msg">
             <UserCard />
             <UserCard />
@@ -26,12 +27,12 @@ const Dashboard = (props) => {
         </div>
 
         <div className="col-8 chat-area px-0">
-          <div className="chat-headers">HELENE</div>
+          <div className="chat-headers">{t('dashboard.helene')}</div>
           <div className="scr-cht">
             <div className="coin-area">
               <img src={coinImg.src} alt="" />
               <span>432</span>
-              <small className="pb-1">COINS LEFT</small>
+              <small className="pb-1">{t('dashboard.coinsLeft')}</small>
             </div>
 
             <SendMessage />
@@ -51,7 +52,7 @@ const Dashboard = (props) => {
             <div className="chat-send-area">
               <i className="fa fa-paperclip" aria-hidden="true"></i>
               <div className="send">
-                <input type="text" placeholder="Enter a message" />
+                <input type="text" placeholder={t('dashboard.enterMesssage')} />
                 <i className="fas fa-arrow-up"></i>
               </div>
             </div>

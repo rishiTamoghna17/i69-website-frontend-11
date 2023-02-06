@@ -320,5 +320,24 @@
   "Reset": {
     "email": "이메일",
     "resetLink": "재설정 링크를 보내주세요"
+  },
+  "dashboard": {
+    "message": "메시지",
+    "helene": "헬레네",
+    "coinsLeft": "남은 코인",
+    "enterMesssage": "메시지를 입력하세요",
+    "chatCoin": "채팅 코인 구매",
+    "connection": "그러나 i69 코인 - 연결의 새로운 세계를 열다"
+  },
+  "userProfile": {
+    "tresasure": "보물",
+    "about": "에 대한",
+    "interest": "이해"
+  },
+  "search": {
+    "searchResult": "검색 결과",
+    "random": "무작위의",
+    "popular": "인기 있는",
+    "mostActive": "가장 활동적"
   }
 }

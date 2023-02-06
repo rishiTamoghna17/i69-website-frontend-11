@@ -35,14 +35,14 @@
     "peopleSearch": "SEARCH FOR PEOPLE NEARBY",
     "distance": "or by distance!",
     "Menu": "Menu",
-    "Home":"Home",
-    "FAQ":"FAQ",
-    "Policy":"Policy",
-    "Terms":"Terms",
-    "Login":"Login",
-    "Logout":"Logout",
-    "Profile":"Profile",
-    "Signup":"Sign up"
+    "Home": "Home",
+    "FAQ": "FAQ",
+    "Policy": "Policy",
+    "Terms": "Terms",
+    "Login": "Login",
+    "Logout": "Logout",
+    "Profile": "Profile",
+    "Signup": "Sign up"
   },
   "Profile": {
     "userName": "User Name",
@@ -320,5 +320,24 @@
   "Reset": {
     "email": "Email",
     "resetLink": "Send me a reset link"
+  },
+  "dashboard": {
+    "message": "MESSAGES",
+    "helene": "HELENE",
+    "coinsLeft": "COINS LEFT",
+    "enterMesssage": "Enter a message",
+    "chatCoin": "BUY CHAT COIN",
+    "connection": "But i69 coins - open new world of connection"
+  },
+  "userProfile": {
+    "tresasure": "TRESASURE",
+    "about": "ABOUT",
+    "interest": "INTERESTS"
+  },
+  "search": {
+    "searchResult": "SEARCH RESULT",
+    "random": "RANDOM",
+    "popular": "POPULAR",
+    "mostActive": "MOST ACTIVE"
   }
 }

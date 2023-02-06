@@ -319,5 +319,24 @@
   "Reset": {
     "email": "אימייל",
     "resetLink": "שלח לי קישור לאיפוס"
+  },
+  "dashboard": {
+    "message": "הודעות",
+    "helene": "הלנה",
+    "coinsLeft": "נותרו מטבעות",
+    "enterMesssage": "הזן הודעה",
+    "chatCoin": "קנה מטבע צ'אט",
+    "connection": "אבל מטבעות i69 - פתח עולם חדש של חיבור"
+  },
+  "userProfile": {
+    "tresasure": "אוצר",
+    "about": "על אודות",
+    "interest": "אינטרסים"
+  },
+  "search": {
+    "searchResult": "תוצאות חיפוש",
+    "random": "אַקרַאִי",
+    "popular": "פופולרי",
+    "mostActive": "הכי פעיל"
   }
 }

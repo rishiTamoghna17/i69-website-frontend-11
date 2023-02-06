@@ -320,5 +320,24 @@
   "Reset": {
     "email": "E-mail",
     "resetLink": "Stuur me een resetlink"
+  },
+  "dashboard": {
+    "message": "BERICHTEN",
+    "helene": "HELENE",
+    "coinsLeft": "MUNTEN OVER",
+    "enterMesssage": "Voer een bericht in",
+    "chatCoin": "KOOP CHAT COIN",
+    "connection": "Maar i69-munten - open een nieuwe wereld van verbinding"
+  },
+  "userProfile": {
+    "tresasure": "SCHAT",
+    "about": "OVER",
+    "interest": "INTERESSEN"
+  },
+  "search": {
+    "searchResult": "ZOEKRESULTAAT",
+    "random": "WILLEKEURIG",
+    "popular": "POPULAIR",
+    "mostActive": "MEEST ACTIEF"
   }
 }

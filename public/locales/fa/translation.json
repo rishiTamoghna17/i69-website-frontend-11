@@ -319,5 +319,24 @@
   "Reset": {
     "email": "پست الکترونیک",
     "resetLink": "برای من لینک ریست بفرست"
+  },
+  "dashboard": {
+    "message": "پیام ها",
+    "helene": "هلن",
+    "coinsLeft": "سکه ها باقی مانده است",
+    "enterMesssage": "یک پیام وارد کنید",
+    "chatCoin": "خرید سکه چت",
+    "connection": "اما سکه های i69 - باز کردن دنیای جدید اتصال"
+  },
+  "userProfile": {
+    "tresasure": "گنجینه",
+    "about": "در باره",
+    "interest": "منافع"
+  },
+  "search": {
+    "searchResult": "نتیجه جستجو",
+    "random": "تصادفی",
+    "popular": "محبوب",
+    "mostActive": "فعال ترین"
   }
 }

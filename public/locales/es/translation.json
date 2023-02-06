@@ -319,5 +319,24 @@
   "Reset": {
     "email": "Correo electrónico",
     "resetLink": "Envíame un enlace de reinicio"
+  },
+  "dashboard": {
+    "message": "MENSAJES",
+    "helene": "HELENA",
+    "coinsLeft": "MONEDAS QUE QUEDAN",
+    "enterMesssage": "Introduce un mensaje",
+    "chatCoin": "COMPRAR MONEDA DE CHAT",
+    "connection": "Pero las monedas i69 abren un nuevo mundo de conexión"
+  },
+  "userProfile": {
+    "tresasure": "TESORO",
+    "about": "ACERCA DE",
+    "interest": "INTERESES"
+  },
+  "search": {
+    "searchResult": "RESULTADO DE BÚSQUEDA",
+    "random": "ALEATORIO",
+    "popular": "POPULAR",
+    "mostActive": "MAS ACTIVO"
   }
 }

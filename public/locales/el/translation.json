@@ -320,5 +320,24 @@
   "Reset": {
     "email": "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ",
     "resetLink": "Στείλτε μου έναν σύνδεσμο επαναφοράς"
+  },
+  "dashboard": {
+    "message": "ΜΗΝΥΜΑΤΑ",
+    "helene": "ΕΛΕΝΗ",
+    "coinsLeft": "ΕΜΕΙΝΑΝ ΝΟΜΙΣΜΑΤΑ",
+    "enterMesssage": "Εισαγάγετε ένα μήνυμα",
+    "chatCoin": "ΑΓΟΡΑ CHAT COIN",
+    "connection": "Αλλά νομίσματα i69 - ανοίξτε έναν νέο κόσμο σύνδεσης"
+  },
+  "userProfile": {
+    "tresasure": "ΘΗΣΑΥΡΟΣ",
+    "about": "ΣΧΕΤΙΚΑ ΜΕ",
+    "interest": "ΤΑ ΕΝΔΙΑΦΕΡΟΝΤΑ"
+  },
+  "search": {
+    "searchResult": "ΑΠΟΤΕΛΕΣΜΑ ΑΝΑΖΗΤΗΣΗΣ",
+    "random": "ΤΥΧΑΙΟΣ",
+    "popular": "ΔΗΜΟΦΙΛΗΣ",
+    "mostActive": "ΠΙΟ ΔΡΑΣΤΗΡΙΟ"
   }
 }

@@ -1,9 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 const ChatDescription = ({ text = "Hey", time = "02:09" }) => {
+    const { t } = useTranslation()
     return (
         <>
-            <h3 class="text-center">BUY CHAT COIN</h3>
-            <strong>But i69 coins - open new world of connection</strong>
+            <h3 class="text-center">{t('dashboard.chatCoin')}</h3>
+            <strong>{t('dashboard.connection')}</strong>
         </>
     );
 };

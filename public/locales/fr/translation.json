@@ -320,5 +320,24 @@
   "Reset": {
     "email": "E-mail",
     "resetLink": "Envoyez-moi un lien de réinitialisation"
+  },
+  "dashboard": {
+    "message": "MESSAGES",
+    "helene": "HELENE",
+    "coinsLeft": "PIÈCES RESTANT",
+    "enterMesssage": "Entrez un message",
+    "chatCoin": "ACHETER DES PIÈCES DE CHAT",
+    "connection": "Mais les pièces i69 - ouvrez un nouveau monde de connexion"
+  },
+  "userProfile": {
+    "tresasure": "TRÉSOR",
+    "about": "À PROPOS",
+    "interest": "INTÉRÊTS"
+  },
+  "search": {
+    "searchResult": "RÉSULTAT DE LA RECHERCHE",
+    "random": "ALÉATOIRE",
+    "popular": "POPULAIRE",
+    "mostActive": "LES PLUS ACTIFS"
   }
 }

@@ -319,5 +319,24 @@
   "Reset": {
     "email": "E-mail",
     "resetLink": "Inviami un link di ripristino"
+  },
+  "dashboard": {
+    "message": "MESSAGGI",
+    "helene": "ELENA",
+    "coinsLeft": "MONETE RIMASTE",
+    "enterMesssage": "Inserisci un messaggio",
+    "chatCoin": "ACQUISTA CHAT COIN",
+    "connection": "Ma monete i69: apri un nuovo mondo di connessione"
+  },
+  "userProfile": {
+    "tresasure": "TESORO",
+    "about": "DI",
+    "interest": "INTERESSI"
+  },
+  "search": {
+    "searchResult": "RISULTATO DELLA RICERCA",
+    "random": "CASUALE",
+    "popular": "POPOLARE",
+    "mostActive": "IL PIU 'ATTIVO"
   }
 }

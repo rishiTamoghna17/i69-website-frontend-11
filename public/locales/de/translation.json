@@ -320,5 +320,24 @@
   "Reset": {
     "email": "Email",
     "resetLink": "Senden Sie mir einen Reset-Link"
+  },
+  "dashboard": {
+    "message": "MITTEILUNGEN",
+    "helene": "HELENE",
+    "coinsLeft": "MÜNZEN VERBLEIBEN",
+    "enterMesssage": "Geben Sie eine Nachricht ein",
+    "chatCoin": "CHAT-MÜNZE KAUFEN",
+    "connection": "Aber i69-Münzen - öffnen Sie eine neue Welt der Verbindung"
+  },
+  "userProfile": {
+    "tresasure": "SCHATZ",
+    "about": "UM",
+    "interest": "INTERESSEN"
+  },
+  "search": {
+    "searchResult": "SUCHERGEBNIS",
+    "random": "WILLKÜRLICH",
+    "popular": "BELIEBT",
+    "mostActive": "AM AKTIVSTEN"
   }
 }

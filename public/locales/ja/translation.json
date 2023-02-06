@@ -319,5 +319,24 @@
   "Reset": {
     "email": "Eメール",
     "resetLink": "リセットリンクを送ってください"
+  },
+  "dashboard": {
+    "message": "メッセージ",
+    "helene": "ヘレン",
+    "coinsLeft": "残りのコイン",
+    "enterMesssage": "メッセージを入力してください",
+    "chatCoin": "チャットコインを購入する",
+    "connection": "しかし i69 コイン - 接続の新しい世界を開く"
+  },
+  "userProfile": {
+    "tresasure": "トレジャー",
+    "about": "だいたい",
+    "interest": "興味"
+  },
+  "search": {
+    "searchResult": "検索結果",
+    "random": "ランダム",
+    "popular": "人気",
+    "mostActive": "最もアクティブ"
   }
 }

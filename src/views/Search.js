@@ -6,7 +6,9 @@ import Person4Icon from '@mui/icons-material/Person4';
 import MessageIcon from '@mui/icons-material/Message';
 import ProfileComponents from "../components/sections/ProfileComponents";
 import ChatDescription from "../components/sections/ProfileComponents/ChatDescription";
+import { useTranslation } from "react-i18next";
 const Search = (props) => {
+    const { t } = useTranslation()
     const router = useRouter();
     const [activeTab, setActiveTab] = useState('RANDOM')
     const ListItem = ({ text }) => {
@@ -36,13 +38,13 @@ const Search = (props) => {
             {/* <!-- header area --> */}
             <div class="header-control header-gold">
                 <i class="fa fa-angle-left " aria-hidden="true" onClick={() => router.back()}></i>
-                <h5>SEARCH RESULT</h5>
+                <h5>{t('search.searchResult')}</h5>
                 <img src={logoRightImg.src} />
             </div>
             <ul class="nav nav-tabs search-tab" id="myTab" role="tablist">
-                <ListItem text={'RANDOM'} />
-                <ListItem text={'POPULAR'} />
-                <ListItem text={'MOST ACTIVE'} />
+                <ListItem text={t('search.random')} />
+                <ListItem text={t('search.popular')} />
+                <ListItem text={t('search.mostActive')} />
             </ul>
             <div class="tab-content user-search-area" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">

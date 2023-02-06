@@ -320,5 +320,24 @@
   "Reset": {
     "email": "بريد إلكتروني",
     "resetLink": "أرسل لي رابط إعادة تعيين"
+  },
+  "dashboard": {
+    "message": "رسائل",
+    "helene": "هيلين",
+    "coinsLeft": "العملات المعدنية المتبقية",
+    "enterMesssage": "أدخل رسالة",
+    "chatCoin": "شراء عملة الدردشة",
+    "connection": "لكن عملات i69 - افتح عالمًا جديدًا من الاتصال"  
+  },
+  "userProfile": {
+    "tresasure": "TRESASURE",
+    "about": "عن",
+    "interest": "الإهتمامات"
+  },
+  "search": {
+    "searchResult": "نتيجة البحث",
+    "random": "عشوائي",
+    "popular": "شائع",
+    "mostActive": "أكثر نشاطا"
   }
 }

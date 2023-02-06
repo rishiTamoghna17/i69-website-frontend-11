@@ -320,5 +320,24 @@
   "Reset": {
     "email": "Эл. адрес",
     "resetLink": "Пришлите мне ссылку сброса"
+  },
+  "dashboard": {
+    "message": "СООБЩЕНИЯ",
+    "helene": "ЭЛЕН",
+    "coinsLeft": "ОСТАЛОСЬ МОНЕТЫ",
+    "enterMesssage": "Введите сообщение",
+    "chatCoin": "КУПИТЬ ЧАТ МОНЕТЫ",
+    "connection": "Но монеты i69 - открой новый мир связи"
+  },
+  "userProfile": {
+    "tresasure": "СОКРОВИЩЕ",
+    "about": "О",
+    "interest": "ИНТЕРЕСЫ"
+  },
+  "search": {
+    "searchResult": "РЕЗУЛЬТАТ ПОИСКА",
+    "random": "СЛУЧАЙНЫЙ",
+    "popular": "ПОПУЛЯРНЫЙ",
+    "mostActive": "НАИБОЛЕЕ АКТИВНО"
   }
 }

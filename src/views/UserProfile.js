@@ -7,8 +7,10 @@ import { useRouter } from 'next/router';
 import Person4Icon from '@mui/icons-material/Person4';
 import MessageIcon from '@mui/icons-material/Message';
 import TabComponents from "../components/sections/ProfileComponents/TabComponents";
+import { useTranslation } from "react-i18next";
 
 const UserProfile = (props) => {
+    const { t } = useTranslation()
     const router = useRouter();
     const [activeTab, setActiveTab] = useState('ABOUT')
     const navigatorHandler = () => {
@@ -47,7 +49,7 @@ const UserProfile = (props) => {
             <div class="header-control h-c-g">
                 <i class="fa fa-angle-left gold-icon" aria-hidden="true" onClick={() => router.back()}></i>
                 <div style={{ flex: 1 }}>
-                    <h5 >TRESASURE</h5>
+                    <h5 >{t('userProfile.tresasure')}</h5>
                 </div>
 
                 <img src={logoRightImg.src} />
@@ -59,8 +61,8 @@ const UserProfile = (props) => {
                     {/* <!-- tabs start --> */}
                     <nav class="about-intrest">
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <Tabpanel text={'ABOUT'} />
-                            <Tabpanel text={'INTERESTS'} />
+                            <Tabpanel text={t('userProfile.about')} />
+                            <Tabpanel text={t('userProfile.interest')} />
                             {/* <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
                                 aria-controls="nav-home" aria-selected="true"></a>
                             <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"

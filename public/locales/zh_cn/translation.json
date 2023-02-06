@@ -320,5 +320,24 @@
   "Reset": {
     "email": "电子邮件",
     "resetLink": "给我一个重置链接"
+  },
+  "dashboard": {
+    "message": "讯息",
+    "helene": "海伦",
+    "coinsLeft": "剩余硬币",
+    "enterMesssage": "输入消息",
+    "chatCoin": "购买聊天币",
+    "connection": "但 i69 硬币 - 打开连接的新世界"
+  },
+  "userProfile": {
+    "tresasure": "宝藏",
+    "about": "关于",
+    "interest": "兴趣"
+  },
+  "search": {
+    "searchResult": "搜索结果",
+    "random": "随机的",
+    "popular": "受欢迎的",
+    "mostActive": "最活跃"
   }
 }

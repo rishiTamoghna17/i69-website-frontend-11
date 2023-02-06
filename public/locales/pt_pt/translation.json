@@ -305,20 +305,39 @@
   },
   "Registration": {
     "email": "O email",
-  "password": "Senha",
-  "userName": "Nome do usuário",
-  "gender": "Gênero",
-  "age": "Era",
-  "politics": "Política",
-  "ethnicity": "Etnia",
-  "religiousBeliefs": "Crenças religiosas",
-  "zodiacSign": "Signo do zodíaco",
-  "height": "Altura",
-  "familyPlans": "Planos Familiares",
-  "signup": "Inscrever-se"
+    "password": "Senha",
+    "userName": "Nome do usuário",
+    "gender": "Gênero",
+    "age": "Era",
+    "politics": "Política",
+    "ethnicity": "Etnia",
+    "religiousBeliefs": "Crenças religiosas",
+    "zodiacSign": "Signo do zodíaco",
+    "height": "Altura",
+    "familyPlans": "Planos Familiares",
+    "signup": "Inscrever-se"
   },
   "Reset": {
     "email": "O email",
     "resetLink": "Envie-me um link de redefinição"
+  },
+  "dashboard": {
+    "message": "MENSAGENS",
+    "helene": "HELENA",
+    "coinsLeft": "MOEDAS ESQUERDAS",
+    "enterMesssage": "Digite uma mensagem",
+    "chatCoin": "COMPRAR MOEDA DO CHAT",
+    "connection": "Mas moedas i69 - abra um novo mundo de conexão"
+  },
+  "userProfile": {
+    "tresasure": "TESOURO",
+    "about": "SOBRE",
+    "interest": "INTERESSES"
+  },
+  "search": {
+    "searchResult": "RESULTADO DA PESQUISA",
+    "random": "ALEATÓRIO",
+    "popular": "POPULAR",
+    "mostActive": "MAIS ATIVO"
   }
 }

@@ -164,7 +164,7 @@
     "successful": "通過從瀏覽器調用像素，Facebook 還可以判斷 Facebook 廣告是否成功。",
     "facebookAnalytics": "我們在 Facebook 分析工具“Facebook Analytics”中使用從 Facebook 像素獲得的數據來優化我們的網站和應用程序。",
     "facebookPrivacyPolicy": "有關詳細信息，請參閱 Facebook 隱私政策，網址為 https://www.facebook.com/about/privacy/。",
-    "socialMediaLinks": "社交媒體鏈接", 
+    "socialMediaLinks": "社交媒體鏈接",
     "networksInstagram": "與社交網絡 Instagram 和 Facebook 的 Mobile Trend i69app 帳戶的鏈接包含在 i69app 域中。",
     "association": "如果用戶登錄到他們在相應社交網絡上的用戶個人資料，則在激活按鈕後，將與 i69app 訪問建立關聯。",
     "socialNetworksCollected": "如果用戶不希望社交網絡通過 i69app 域收集數據，他們應該在訪問 i69app 域之前註銷。",
@@ -320,5 +320,24 @@
   "Reset": {
     "email": "電子郵件",
     "resetLink": "給我一個重置鏈接"
+  },
+  "dashboard": {
+    "message": "訊息",
+    "helene": "海倫",
+    "coinsLeft": "剩餘硬幣",
+    "enterMesssage": "輸入消息",
+    "chatCoin": "購買聊天幣",
+    "connection": "但 i69 硬幣 - 打開連接的新世界"
+  },
+  "userProfile": {
+    "tresasure": "寶藏",
+    "about": "關於",
+    "interest": "興趣"
+  },
+  "search": {
+    "searchResult": "搜索結果",
+    "random": "隨機的",
+    "popular": "受歡迎的",
+    "mostActive": "最活躍"
   }
 }
