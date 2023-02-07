@@ -31,6 +31,7 @@ const Search = (props) => {
             <ProfileComponents />
             <ProfileComponents />
             <ProfileComponents />
+            
         </div>
     }
     return (
