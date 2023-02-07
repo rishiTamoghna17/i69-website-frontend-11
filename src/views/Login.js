@@ -49,6 +49,7 @@ class Login extends Component {
     });
   };
 
+  
   passwordMatch = () => this.state.password === this.state.passwordConfrim;
 
   showPassword = () => {

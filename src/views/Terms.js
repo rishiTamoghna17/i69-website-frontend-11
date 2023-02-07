@@ -6,7 +6,7 @@ const Terms = () => {
   const { t } = useTranslation()
   return (
     // <Paper>
-    <div style={{margin: 100}}>
+    <div style={{margin: 20}}>
       <h2>{t('Terms.terms')}</h2>
       <Grid container spacing={1} direction="row" >
         <Grid item xs={12} sm={10} style = {{padding: 10}}>
