@@ -82,5 +82,6 @@ export const LanguageArray = [
   { label: "Es", value: "es", image: Es },
   { label: "El", value: "el", image: El },
   { label: "Ko", value: "ko", image: Ko },
+  { label: "He", value: "he", image: Iw },
 
 ]
