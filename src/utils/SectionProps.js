@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Ar, Br, Ch, De, El, En, Es, Fa, Fr, It, Iw, Ja, Ko, Nl, Po, Ru, Sw } from '../assets/images';
+import { Ar, Br, Ch, De, El, En, Es, Fa, Fr, Hr, It, Iw, Ja, Ko, Nl, No, Pl, Po, Ru, Sv, Sw } from '../assets/images';
 // Props shared by all sections
 const SectionShared = {
   types: {
@@ -83,5 +83,9 @@ export const LanguageArray = [
   { label: "El", value: "el", image: El },
   { label: "Ko", value: "ko", image: Ko },
   { label: "He", value: "he", image: Iw },
-
+  { label: "Pl", value: "pl", image: Pl },
+  { label: "No", value: "no", image: No },
+  { label: "Sv", value: "sv", image: Sv },
+  { label: "Sw", value: "sw", image: Sw },
+  { label: "Hr", value: "hr", image: Hr },
 ]

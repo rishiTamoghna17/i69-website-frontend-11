@@ -15,6 +15,11 @@ import Nl from "./nl.png";
 import Po from "./po.png";
 import Ru from "./ru.png";
 import Sw from "./sw.png";
+import Pl from "./pl.png";
+import Sv from "./sv.png";
+import Hr from "./hr.png";
+import Cs from "./cs.png";
+import No from "./no.png";
 
 export {
     It,
@@ -33,5 +38,10 @@ export {
     Nl,
     Po,
     Ru,
-    Sw
+    Sw,
+    Pl,
+    Sv,
+    Hr,
+    Cs,
+    No,
 }
