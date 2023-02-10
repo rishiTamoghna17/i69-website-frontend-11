@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Grid } from '@material-ui/core'
-import { t } from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 const Policy = () => {

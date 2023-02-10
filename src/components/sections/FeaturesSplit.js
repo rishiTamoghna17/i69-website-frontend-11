@@ -4,7 +4,6 @@ import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Button from '@material-ui/core/Button';
-import { t } from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 const propTypes = {
