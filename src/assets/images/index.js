@@ -20,6 +20,10 @@ import Sv from "./sv.png";
 import Hr from "./hr.png";
 import Cs from "./cs.png";
 import No from "./no.png";
+import Sl from "./sl.png";
+import Fi from "./fi.png";
+import Da from "./da.png";
+import Tl from "./tl.png";
 
 export {
     It,
@@ -44,4 +48,8 @@ export {
     Hr,
     Cs,
     No,
+    Sl,
+    Fi,
+    Da,
+    Tl
 }
