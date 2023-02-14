@@ -24,6 +24,9 @@ import Sl from "./sl.png";
 import Fi from "./fi.png";
 import Da from "./da.png";
 import Tl from "./tl.png";
+import Th from "./th.png";
+import Am from "./am.png";
+import Lv from "./lv.png";
 
 export {
     It,
@@ -51,5 +54,8 @@ export {
     Sl,
     Fi,
     Da,
-    Tl
+    Tl,
+    Th,
+    Am,
+    Lv
 }
