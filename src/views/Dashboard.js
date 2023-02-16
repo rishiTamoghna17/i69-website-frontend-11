@@ -12,7 +12,7 @@ const Dashboard = (props) => {
   const { t } = useTranslation()
   return (
     <div>
-      <div className="row m-0">
+      <div className="dataView row m-0">
         <div className="col-4 user-list-parent px-0">
           <div className="chat-headers msg-header">{t('dashboard.message')}</div>
           <div className="scr-msg">

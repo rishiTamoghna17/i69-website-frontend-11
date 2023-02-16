@@ -1039,3 +1039,15 @@ i{
         display: block !important;
     }
 }
+
+@media (max-width:1000px){
+    .dataView {
+      flex-direction: column !important;
+    }
+    .user-list-parent{
+        width: 100% !important;
+    }
+    .chat-area{
+        width: 100% !important;
+    }
+}
