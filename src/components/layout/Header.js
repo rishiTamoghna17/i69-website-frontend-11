@@ -114,7 +114,8 @@ const Header = (props) => {
     if (
       !isActive ||
       nav.current.contains(e.target) ||
-      e.target === hamburger.current
+      e.target === hamburger.current ||
+      document.body === e.target
     )
       return;
     closeMenu();
@@ -273,8 +274,8 @@ const Header = (props) => {
                           classes={{ root: "langBg", MuiInput: "123123" }}
                         >
                           <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select1"
+                            labelId="languageSelect"
+                            id="languageSelect"
                             value={language}
                             label="Language"
                             onChange={handleChange}
