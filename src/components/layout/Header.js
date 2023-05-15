@@ -199,6 +199,14 @@ const Header = (props) => {
                           <Link href="/terms">{t("Home.Terms")}</Link>
                         </Button>
                       </li>
+                      <li>
+                        <Button
+                          style={{ textTransform: "initial" }}
+                          onClick={closeMenu}
+                        >
+                          <Link href="/contactUs">{t("ContactUs")}</Link>
+                        </Button>
+                      </li>
                     </ul>
                   </div>
 
