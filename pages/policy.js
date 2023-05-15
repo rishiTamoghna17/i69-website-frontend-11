@@ -15,8 +15,6 @@ export async function getServerSideProps({locale}){
         }
       }
     }
-
-    
   }
 const Policy = () => {
     return (
