@@ -36,6 +36,19 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "4px",
     width: "500px",
     margin: "auto",
+    [theme.breakpoints.down('xs')]: {
+      width: "100%",
+      padding: "15px",
+    },
+    // [theme.breakpoints.up('md')]: {
+    //   backgroundColor: 'green',
+    // },
+    // [theme.breakpoints.up('lg')]: {
+    //   backgroundColor: 'orange',
+    // },
+    // [theme.breakpoints.up('xl')]: {
+    //   backgroundColor: 'cyan',
+    // },
   },
   customInput: {
     paddingBottom: "8px",

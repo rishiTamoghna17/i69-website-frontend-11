@@ -53,15 +53,18 @@
     }
 
     a:not(.button) {
-		display: block;
+		display: inl;
         @include anchor-aspect(header);
 		@include font-weight(header-link);
 		text-transform: $link-header--transform;
         padding: 0 $header-nav--padding-h;
-
+	
 		.invert-color & {
 			@include anchor-aspect(header, inverse);
 		}
+		@media screen and (max-width: 991px) {
+			padding: 0 14px;
+		  }
     }
 
 	//a.button {
