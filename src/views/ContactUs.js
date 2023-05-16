@@ -15,7 +15,9 @@ import InputAdornment from "@mui/material/InputAdornment";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
 import SendIcon from "@mui/icons-material/Send";
-import axios from "axios";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import Link from "next/link";
+// import axios from "axios";
 // import { gql, useMutation } from "@apollo/client";
 
 const validationSchema = Yup.object().shape({
@@ -66,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
 const ContactUs = () => {
   const classes = useStyles();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [message, setMessage] = useState(false);
   const {
     handleSubmit,
     register,
@@ -87,11 +90,11 @@ const ContactUs = () => {
     // add any other API-related methods here
   });
 
-
-const showMessage = (message) => {
-  // Update the code here to display the message as desired
-  console.log(message); // Example: Log the message to the console
-};
+  const showMessage = (message) => {
+    // Update the code here to display the message as desired
+    setMessage(message);
+    console.log(message); // Example: Log the message to the console
+  };
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -112,11 +115,12 @@ const showMessage = (message) => {
       } else {
         // Handle error case or other conditions
         console.log("Request was not successful");
-        showMessage("FAILED MEESSAGE REQUEST");
+        showMessage(true);
       }
       // Perform further actions with the response data
       return response; // Optionally return the response object
     } catch (error) {
+      showMessage(true);
       console.error("Error:", error);
       return error;
     }
@@ -133,14 +137,39 @@ const showMessage = (message) => {
             square
             elevation={3}
           >
-            {isSubmitted ? (
+            {message && (
               <Typography
-                style={{ color: "#000", fontSize: "25px", fontWeight: "bold" }}
-                variant="h3"
-                component="h2"
+                style={{ color: "red", fontSize: "16px", marginTop: "8px" }}
+                variant="body1"
+                component="p"
               >
-                Thank you for your message! We will get back to you shortly.
+                FAILED MEESSAGE REQUEST
               </Typography>
+            )}
+            {isSubmitted ? (
+              <>
+                <Typography
+                  style={{
+                    color: "#000",
+                    fontSize: "25px",
+                    fontWeight: "bold",
+                  }}
+                  variant="h3"
+                  component="h2"
+                >
+                  Thank you for your message! We will get back to you shortly.
+                </Typography>
+                <Button
+                  size="large"
+                  className={classes.customButton}
+                  type="submit"
+                  variant="contained"
+                  color="secondary"
+                  startIcon={<ArrowBackIcon />}
+                >
+                  <Link href="/"> Back to Home Page</Link>
+                </Button>
+              </>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)}>
                 <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
