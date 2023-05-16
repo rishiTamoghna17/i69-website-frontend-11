@@ -14,8 +14,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import InputAdornment from "@mui/material/InputAdornment";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
-import SendIcon from '@mui/icons-material/Send';
-// import axios from "axios";
+import SendIcon from "@mui/icons-material/Send";
+import axios from "axios";
 // import { gql, useMutation } from "@apollo/client";
 
 const validationSchema = Yup.object().shape({
@@ -23,7 +23,7 @@ const validationSchema = Yup.object().shape({
   email: Yup.string()
     .email("Please enter a valid email")
     .required("Please enter your email"),
-  messageText: Yup.string().required("Required Field"),
+  message: Yup.string().required("Required Field"),
 });
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     color: "#000",
     marginBottom: "20px",
-     },
+  },
 }));
 
 const ContactUs = () => {
@@ -75,11 +75,10 @@ const ContactUs = () => {
     defaultValues: {
       name: "",
       email: "",
-      messageText: "",
+      message: "",
     },
   });
-
-  const apiHost = "https://api.chatadmin-mod.click/admin/chat/contactus/";
+  const apiHost = "https://api.chatadmin-mod.click/api/contact-us/";
   const Api = Object.freeze({
     defaultHeaders: {
       "Content-Type": "application/json",
@@ -87,6 +86,12 @@ const ContactUs = () => {
     },
     // add any other API-related methods here
   });
+
+
+const showMessage = (message) => {
+  // Update the code here to display the message as desired
+  console.log(message); // Example: Log the message to the console
+};
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -96,14 +101,25 @@ const ContactUs = () => {
       body: JSON.stringify(data),
     });
 
-    return fetch(request)
-      .then((response) => {
-        console.log("response", response);
-        return response;
-      })
-      .catch((error) => {
-        return error;
-      });
+    try {
+      const response = await fetch(request);
+      const responseData = await response.json();
+      console.log("Response data:", responseData);
+      if (responseData.success === true) {
+        // Handle success case
+        console.log("Request was successful");
+        setIsSubmitted(true);
+      } else {
+        // Handle error case or other conditions
+        console.log("Request was not successful");
+        showMessage("FAILED MEESSAGE REQUEST");
+      }
+      // Perform further actions with the response data
+      return response; // Optionally return the response object
+    } catch (error) {
+      console.error("Error:", error);
+      return error;
+    }
   };
 
   return (
@@ -127,7 +143,7 @@ const ContactUs = () => {
               </Typography>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)}>
-                <Box sx={{ display: "flex", alignItems: "center",mb:3  }}>
+                <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
                   <AccountCircle
                     sx={{ color: "action.active", mr: 1, my: 0.5 }}
                   />
@@ -141,7 +157,7 @@ const ContactUs = () => {
                   />
                 </Box>
 
-                <Box sx={{ display: "flex", alignItems: "center", mb:3 }}>
+                <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
                   <EmailIcon sx={{ color: "action.active", mr: 1, my: 0.5 }} />
                   <TextField
                     label="Email"
@@ -158,11 +174,11 @@ const ContactUs = () => {
                   label="Tell us more"
                   multiline
                   rows={4}
-                  {...register("messageText")}
+                  {...register("message")}
                   fullWidth
                   variant="outlined"
-                  error={!!errors.messageText}
-                  helperText={errors.messageText?.message}
+                  error={!!errors.message}
+                  helperText={errors.message?.message}
                 />
 
                 <Button
