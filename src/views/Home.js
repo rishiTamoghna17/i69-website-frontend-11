@@ -43,7 +43,17 @@ const Home = () => {
           href="https://play.google.com/store/apps/details?id=com.i69app.i69app&pli=1"
           target="_blank"
         >
-          <svg className="dark" width="180" height="53.333">
+          <Image
+                  src={'../images/dark.png'}
+                  className="dark"
+                  alt="interracial-coluple"
+                  />
+                   <Image
+                   className="white"
+                  src={'../images/white.png'}
+                  alt="interracial-coluple"
+                 />
+          {/* <svg className="dark" width="180" height="53.333">
             <path
               id="path11"
               d="m173.33 53.333h-166.66c-3.6666 0-6.6665-2.9999-6.6665-6.6665v-39.999c0-3.6666 2.9999-6.6665 6.6665-6.6665h166.66c3.6666 0 6.6665 2.9999 6.6665 6.6665v39.999c0 3.6666-2.9999 6.6665-6.6665 6.6665"
@@ -146,7 +156,7 @@ const Home = () => {
               stroke-miterlimit="10"
               stroke-width=".26666"
             />
-          </svg>
+          </svg> */}
         </Button>
       </div>
       <FeaturesTiles />
