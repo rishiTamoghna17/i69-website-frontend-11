@@ -6,9 +6,25 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 //import './App.css';
 import './assets/scss/style.scss';
-
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import nextI18nextConfig from '../next-i18next.config';
+var firebase = require('firebase/app');
+require('firebase/auth');
+require('firebase/database');
 const history = createBrowserHistory();
-
+export async function getServerSideProps({locale}){
+  if(locale){
+    return{
+      props:{
+        ...(await serverSideTranslations(
+          locale,
+          ['translation'],
+          nextI18nextConfig
+        ))
+      }
+    }
+  }
+}
 ReactDOM.render(
   <Router history={history}>
       <App />

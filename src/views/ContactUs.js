@@ -94,7 +94,9 @@ const ContactUs = () => {
       message: "",
     },
   });
-  const apiHost = "https://api.chatadmin-mod.click/api/contact-us/";
+  // const apiHost = "https://api.chatadmin-mod.click/api/contact-us/";
+  const apiHost = "https://api.i69app.com/api/contact-us/";
+  
   const Api = Object.freeze({
     defaultHeaders: {
       "Content-Type": "application/json",
@@ -140,7 +142,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div style={{ marginTop: 100, textAlign: "center" }}>
+    <div style={{ margin: 20, textAlign: "center" }}>
       <h2>CONTACT US</h2>
       <Grid container spacing={1} direction="row">
         <Grid item xs={12}>
