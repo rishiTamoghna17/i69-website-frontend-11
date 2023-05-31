@@ -3,14 +3,9 @@ import React, { useEffect, useRef } from 'react';
 import LayoutDefault from '../src/layouts/LayoutDefault';
 import ScrollReveal from '../src/utils/ScrollReveal';
 import ReactGA from 'react-ga';
-import "@apollo/client"
 import '../src/assets/scss/style.scss'
 import { useRouter } from 'next/router';
 import { ReduxWrapper } from '../redux/store';
-import { appWithTranslation } from 'next-i18next';
-import { ApolloProvider } from '@apollo/client';
-import { client } from '../src/ApolloClient/client';
-import './App.css'
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 
 const trackPage = page => {
@@ -31,16 +26,14 @@ const MyApp = ({ Component, pageProps }) => {
   }, [router]);
 
   return (
-    <ApolloProvider client={client}>
-      <ScrollReveal
-        ref={childRef}
-        children={() => (
-          <LayoutDefault>
-            <Component {...pageProps} />
-          </LayoutDefault>
-        )} />
-    </ApolloProvider>
+    <ScrollReveal
+      ref={childRef}
+      children={() => (
+        <LayoutDefault>
+          <Component {...pageProps} />
+        </LayoutDefault>
+      )} />
   );
 }
 
-export default ReduxWrapper.withRedux(appWithTranslation(MyApp))
+export default ReduxWrapper.withRedux(MyApp)

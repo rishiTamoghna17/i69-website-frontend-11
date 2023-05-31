@@ -1,9 +1,9 @@
 .site-header {
-	//position: absolute !important;
+	position: absolute !important;
 	top: 0;
 	width: 100%;
 	z-index: 10 !important;
-	background: #202427;
+	background: color-bg(header);
 
 	+ .site-content {
 
@@ -30,7 +30,6 @@
 	.header-nav-inner {
 		display: flex;
 		flex-grow: 1;
-		flex-wrap: wrap;
 	}
 
     ul {
@@ -53,23 +52,20 @@
     }
 
     a:not(.button) {
-		display: inl;
+		display: block;
         @include anchor-aspect(header);
 		@include font-weight(header-link);
 		text-transform: $link-header--transform;
         padding: 0 $header-nav--padding-h;
-	
+
 		.invert-color & {
 			@include anchor-aspect(header, inverse);
 		}
-		@media screen and (max-width: 991px) {
-			padding: 0 14px;
-		  }
     }
 
-	//a.button {
-	//	margin-left: $header-nav--padding-h;
-	//}
+	a.button {
+		margin-left: $header-nav--padding-h;
+	}
 }
 
 .header-nav-center:first-of-type {
@@ -135,51 +131,6 @@
 				margin-bottom: $header-nav--padding-v__mobile / 2;
 			}
 		}
-	}
-}
-.imageFlage{
-	margin-left: 10px;
-}
-.dropDownMenuWrapper{
-	display: flex !important;
-	align-items: center;
-	padding: 0 7px !important;
-}
-.langBg {
-	background: #e6cd67;
-	color: #fff !important;
-	border-radius: 4px;
-	overflow: hidden;
-	padding-left: 5px;
-	.MuiInput-underline:before,.MuiInput-underline:after {
-		display: none !important;
-	}
-}
-.menu-outbox {
-	.MuiMenu-paper {
-		max-height: 350px;
-		margin-top: 44px;
-		&::-webkit-scrollbar {
-			width: 5px;
-		}
-		&::-webkit-scrollbar-track {
-			background: #000;
-		}
-		&::-webkit-scrollbar-thumb {
-			background: #888;
-		}
-		&::-webkit-scrollbar-thumb:hover {
-			background: #555;
-		}
-		.MuiListItem-root,.MuiMenu-list {
-			background: #3b3c3e;
-		}
-	}
-}
-.input-select {
-	padding-left: 10px !important;
-	* {
-		color: #000 !important;
 	}
 }
 @include media( '>medium' ) {

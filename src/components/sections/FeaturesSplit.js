@@ -4,7 +4,6 @@ import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Button from '@material-ui/core/Button';
-import { useTranslation } from 'react-i18next';
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -28,7 +27,6 @@ const FeaturesSplit = ({
   imageFill,
   ...props
 }) => {
-  const { t } = useTranslation()
   const outerClasses = classNames(
     'features-split section',
     topOuterDivider && 'has-top-divider',
@@ -69,17 +67,17 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <h3 className="mt-0 mb-12">
-                  {t('Home.advatages')}
+                  ADVANTAGES
                   </h3>
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  {t('Home.best')}
+                  i69 IS the Best dating app , FREE app and SAFE for dating .
                   </div>
 
                 <p className="m-0">
-                  {t('Home.goodPlace')}
+                  Good place to meet :Soulmate, Friends, Roommates and Business Contacts nearby …
                   </p>
-                <Button variant="contained" style={{ margin: 50}}  color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app" target="_blank">
-                  {t('Home.download')}
+                <Button variant="contained" style={{ margin: 50}}  color="secondary" href="https://play.google.com/store/apps/details?id=soft.agency.kbt.com.i69.stage&hl=en" target="_blank">
+                  Download
                 </Button>
               </div>
               <div className={
@@ -99,19 +97,21 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
                 <h3 className="mt-0 mb-12">
-                  {t('Home.fastRegistration')}
+                  FAST REGISTRATION
                   </h3>
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  {t('Home.socialnetwork')}
+                  via social networks
                   </div>
 
                 <p className="m-0">
-                  {t('Home.useServices')}
-                  {t('Home.createProfile')}
-                  {t('Home.improvedCommunication')}
+                  To use i69 services you should be registreted in one of the following social networks : Facebook , Twitter or Google(gmail)
+
+                  Create a new profile or authorize via Facebook, Twitter or Google (gmail) It takes just 10 seconds to start meeting people!
+
+                  We have very improved communication system which provides real time communication with members using many options such as gift sending , text messaging, sharing photos,etc.
                   </p>
-                <Button variant="contained" style={{ margin: 50}} color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app" target="_blank">
-                {t('Home.download')}
+                <Button variant="contained" style={{ margin: 50}} color="secondary" href="https://play.google.com/store/apps/details?id=soft.agency.kbt.com.i69.stage&hl=en" target="_blank">
+                  Download
                 </Button>
               </div>
               <div className={
@@ -137,18 +137,18 @@ const FeaturesSplit = ({
                   Lightning fast workflow
                   </div> */}
                 <h3 className="mt-0 mb-12">
-                  {t('Home.freeServices')}
+                  FREE SERVICES
                   </h3>
                 <p className="m-0">
-                  {t('Home.offerServices')}
+                  i69 offers 100% free services to all women desired to Obtain free service for all the features in the app.
 
-                  {t('Home.email')}
+                  Send request at: isixtyNine.adm@gmail.com
 
-                  {t('Home.attachCopy')}
+                  Attach copy of passport and/or valid id document , personnale infos for to receive a form to refil.
 
                   </p>
-                <Button variant="contained"  style={{ margin: 50}}  color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app" target="_blank">
-                {t('Home.download')}
+                <Button variant="contained"  style={{ margin: 50}}  color="secondary" href="https://play.google.com/store/apps/details?id=soft.agency.kbt.com.i69.stage&hl=en" target="_blank">
+                  Download
                 </Button>
               </div>
               <div className={
@@ -168,25 +168,25 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
                 <h3 className="mt-0 mb-12">
-                  {t('Home.filters')}
+                  FILTERS
                   </h3>
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  {t('Home.all')}
+                  on i69 All people look for different: some look for
                   </div>
 
                 <p className="m-0">
-                  {t('Home.seriousRelationship')}
+                  Serious Relationship , Some for Casual dating ,some for new friends, flirt , some for Roommates and some for Business Contacts.
 
-                  {t('Home.searchScreen')}
+                  You will appear on appropriated search screen and you will be connected only to people with the same interests than you.
 
-                  {t('Home.everyone')}
-                  {t('Home.advanceFilter')}
+                  How to please everyone?
+                  Use advanced settings filters by dating purpose. Chat with people with the same goals.
 
-                  {t('Homw.newFriends')}
-                  {t('Home.filtersAppearance')}
+                  Would you like to make new friends considering all your preferences?
+                  Use filters for appearance type, height range,age range, tags , family status, children and even sexual preferences…
                   </p>
-                <Button variant="contained"  style={{ margin: 50}} color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app" target="_blank">
-                {t('Home.download')}
+                <Button variant="contained"  style={{ margin: 50}} color="secondary" href="https://play.google.com/store/apps/details?id=soft.agency.kbt.com.i69.stage&hl=en" target="_blank">
+                  Download
                 </Button>
               </div>
               <div className={

@@ -44,8 +44,8 @@ export const register = theme => ({
     },
 
     icon: {
-        width: "70%",
-        height: '100%',
+        width: "100px",
+        height: "100px",
         borderRadius: "40px",
         color: "rgba(131,153,167,0.79)"
     },

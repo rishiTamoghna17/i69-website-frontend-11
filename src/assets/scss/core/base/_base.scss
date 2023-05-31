@@ -125,21 +125,3 @@ td {
 		border-bottom: 1px solid color-border(divider-inverse);
 	}
 }
-
-.loaderWrapper{
-	display:flex;
-	align-items:center;
-	width: 100%;
-    justify-content: center;
-    min-height: calc(100vh - 301px);
-}
-@media (max-width: 640px) {
-	.header-nav-toggle + .header-nav {
-		top: 80px !important;
-		z-index: 999 !important;
-	}
-
-	.menu-outbox .MuiMenu-paper {
-		margin-top: 0 !important;
-	}
-}

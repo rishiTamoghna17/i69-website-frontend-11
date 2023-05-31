@@ -17,16 +17,12 @@ import VisibilityTwoToneIcon from "@material-ui/icons/VisibilityTwoTone";
 import VisibilityOffTwoToneIcon from "@material-ui/icons/VisibilityOffTwoTone";
 import CloseIcon from "@material-ui/icons/Close";
 import withFirebaseAuth from 'react-with-firebase-auth'
-import { withTranslation } from "react-i18next";
-import { withRouter } from 'next/router';
 import firebase from "firebase/app";
 import firebaseConfig from '../common/firebaseConfig';
 
 // Add the Firebase services that you want to use
 import "firebase/auth";
 import "firebase/firestore";
-import "firebase/database";
-import { loginWithFetch } from "../queris";
 class Login extends Component {
   state = {
     email: "",
@@ -34,7 +30,7 @@ class Login extends Component {
     passwordConfrim: "",
     hidePassword: true,
     error: null,
-    errorOpen: false,
+    errorOpen: false
   };
 
   errorClose = e => {
@@ -49,7 +45,6 @@ class Login extends Component {
     });
   };
 
-  
   passwordMatch = () => this.state.password === this.state.passwordConfrim;
 
   showPassword = () => {
@@ -110,22 +105,18 @@ class Login extends Component {
       .then((result) => {
         /** @type {firebase.auth.OAuthCredential} */
         var credential = result.credential;
+
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = credential.accessToken;
-        loginWithFetch({
-          accessToken: credential.idToken,
-          accessVerifier: "",
-          provider: credential.providerId
-        })
         // The signed-in user info.
         var user = result.user;
-        console.log("sadfasdfasdf===>", user)
+        console.log("sadfasdfasdf===>", user.uid)
         localStorage.setItem("uid", user.uid)
-        firebase?.database()?.ref('users')?.child(user.uid).set({
+        firebase.database().ref('users/' + user.uid).set({
           name: user.displayName,
         })
         alert('Login success!')
-        this.props.router?.push('/dashboard')
+        this.props.history.push('/')
         // ...
       }).catch((error) => {
         // Handle Errors here.
@@ -135,7 +126,6 @@ class Login extends Component {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
-        console.log('errorMessage', errorMessage)
         alert(errorMessage)
         // ...
       });
@@ -177,7 +167,7 @@ class Login extends Component {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
-        // alert(errorMessage)
+        alert(errorMessage)
         // ...
       });
 
@@ -207,21 +197,15 @@ class Login extends Component {
         // You can use these server side with your app's credentials to access the Twitter API.
         var token = credential.accessToken;
         var secret = credential.secret;
-        console.log('result', result)
         // The signed-in user info.
         var user = result.user;
         console.log("sadfasdfasdf===>", user)
         localStorage.setItem("uid", user.uid)
-        this.props.router?.push('/dashboard')
-        loginWithFetch({
-          accessToken: credential.accessToken,
-          accessVerifier: credential.secret,
-          provider: 'twitter-oauth'
-        })
         firebase.database().ref('users/' + user.uid).set({
           name: result.additionalUserInfo.profile.name,
         })
         alert('Login success!')
+        this.props.history.push('/')
         // ...
       }).catch((error) => {
         // Handle Errors here.
@@ -231,7 +215,7 @@ class Login extends Component {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
-        // alert(errorMessage)
+        alert(errorMessage)
         // ...
       });
 
@@ -240,7 +224,6 @@ class Login extends Component {
 
   render() {
     const { classes } = this.props;
-    const { t } = this.props
     return (
       <div className={classes.main}>
         {/* <CssBaseline /> */}
@@ -253,7 +236,7 @@ class Login extends Component {
           >
             <FormControl required fullWidth margin="normal">
               <InputLabel htmlFor="email" className={classes.labels}>
-                {t('Login.email')}
+                Email
               </InputLabel>
               <Input
                 name="email"
@@ -264,9 +247,10 @@ class Login extends Component {
                 onChange={this.handleChange("email")}
               />
             </FormControl>
+
             <FormControl required fullWidth margin="normal">
               <InputLabel htmlFor="password" className={classes.labels}>
-                {t('Login.password')}
+                Password
               </InputLabel>
               <Input
                 name="password"
@@ -307,7 +291,7 @@ class Login extends Component {
               type="submit"
               onClick={this.login}
             >
-              {t('Login.login')}
+              Login
             </Button>
           </form>
 
@@ -319,7 +303,7 @@ class Login extends Component {
             type="submit"
             onClick={this.loginWithGoogle}
           >
-            {t('Login.loginGoogle')}
+            Login with Google
           </Button>
           <Button
             disableRipple
@@ -329,8 +313,7 @@ class Login extends Component {
             type="submit"
             onClick={this.loginWithFacebook}
           >
-            {t('Login.loginFacebook')}
-
+            Login with Facebook
           </Button>
           <Button
             disableRipple
@@ -340,17 +323,17 @@ class Login extends Component {
             type="submit"
             onClick={this.loginWithTwitter}
           >
-            {t('Login.loginTwitter')}
+            Login with Twitter
           </Button>
 
           <p className="text-center my-3">
-            {t('Login.account')}{" "}
+            Don't have an account?{" "}
             <Link href="/signup" className="text-blue-500 hover:text-blue-600">
-              {t('Login.signupHere')}
+              Sign up here
             </Link>{" "}
             <br />{" "}
             <Link href="/reset" className="text-blue-500 hover:text-blue-600">
-              {t('Login.forgotPassword')}
+              Forgot Password?
             </Link>
           </p>
           {this.state.error ? (
@@ -392,6 +375,5 @@ class Login extends Component {
     );
   }
 }
-const loginRouter = withRouter(Login)
-const loginComponent = withStyles(register)(loginRouter)
-export default withTranslation()(loginComponent);
+
+export default withStyles(register)(Login);

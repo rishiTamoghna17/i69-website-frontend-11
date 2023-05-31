@@ -97,8 +97,7 @@
 			}
 
 			.split-item-image {
-				// min-width: ($container--width-sm / 2) - $split-item-image--padding-h;
-				min-width: 254px;
+				min-width: ($container--width-sm / 2) - $split-item-image--padding-h;
 			}
 		}
 
@@ -148,8 +147,7 @@
 				}
 
 				.split-item-image {
-					// min-width: ($container--width / 2) - $split-item-image--padding-h;
-					min-width: 428px;
+					min-width: ($container--width / 2) - $split-item-image--padding-h;
 				}
 			}
 		}
