@@ -169,6 +169,14 @@ const Header = (props) => {
                         <Link href="/terms">Terms</Link>
                       </Button>
                     </li>
+                    <li>
+                        <Button
+                          style={{ textTransform: "initial" }}
+                          onClick={closeMenu}
+                        >
+                          <Link href="/contactUs">{("ContactUs")}</Link>
+                        </Button>
+                      </li>
                   </ul>
                   {!hidesignin &&
                     <ul

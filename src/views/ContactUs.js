@@ -140,7 +140,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div style={{ margin: 20, textAlign: "center" }}>
+    <div style={{ marginTop: 100, textAlign: "center" }}>
       <h2>CONTACT US</h2>
       <Grid container spacing={1} direction="row">
         <Grid item xs={12}>

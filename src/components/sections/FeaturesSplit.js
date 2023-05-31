@@ -76,7 +76,7 @@ const FeaturesSplit = ({
                 <p className="m-0">
                   Good place to meet :Soulmate, Friends, Roommates and Business Contacts nearby …
                   </p>
-                <Button variant="contained" style={{ margin: 50}}  color="secondary" href="https://play.google.com/store/apps/details?id=soft.agency.kbt.com.i69.stage&hl=en" target="_blank">
+                <Button variant="contained" style={{ margin: 50}}  color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app&pli=1" target="_blank">
                   Download
                 </Button>
               </div>
@@ -110,7 +110,7 @@ const FeaturesSplit = ({
 
                   We have very improved communication system which provides real time communication with members using many options such as gift sending , text messaging, sharing photos,etc.
                   </p>
-                <Button variant="contained" style={{ margin: 50}} color="secondary" href="https://play.google.com/store/apps/details?id=soft.agency.kbt.com.i69.stage&hl=en" target="_blank">
+                <Button variant="contained" style={{ margin: 50}} color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app&pli=1" target="_blank">
                   Download
                 </Button>
               </div>
@@ -147,7 +147,7 @@ const FeaturesSplit = ({
                   Attach copy of passport and/or valid id document , personnale infos for to receive a form to refil.
 
                   </p>
-                <Button variant="contained"  style={{ margin: 50}}  color="secondary" href="https://play.google.com/store/apps/details?id=soft.agency.kbt.com.i69.stage&hl=en" target="_blank">
+                <Button variant="contained"  style={{ margin: 50}}  color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app&pli=1" target="_blank">
                   Download
                 </Button>
               </div>
@@ -185,7 +185,7 @@ const FeaturesSplit = ({
                   Would you like to make new friends considering all your preferences?
                   Use filters for appearance type, height range,age range, tags , family status, children and even sexual preferences…
                   </p>
-                <Button variant="contained"  style={{ margin: 50}} color="secondary" href="https://play.google.com/store/apps/details?id=soft.agency.kbt.com.i69.stage&hl=en" target="_blank">
+                <Button variant="contained"  style={{ margin: 50}} color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app&pli=1" target="_blank">
                   Download
                 </Button>
               </div>

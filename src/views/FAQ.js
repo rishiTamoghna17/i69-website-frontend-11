@@ -39,7 +39,7 @@ const FAQ = () => {
           
         </Grid>
         <Grid item xs={12} sm={2}>
-          <Button variant="contained" style={{ margin: 50 }} color="secondary" href="https://play.google.com/store/apps/details?id=soft.agency.kbt.com.i69.stage&hl=en" target="_blank">
+          <Button variant="contained" style={{ margin: 50 }} color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app&pli=1" target="_blank">
             Download
           </Button>
         </Grid>
