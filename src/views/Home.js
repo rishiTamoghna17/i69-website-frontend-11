@@ -46,12 +46,12 @@ const Home = () => {
           <Image
                   src={'../images/dark.png'}
                   className="dark"
-                  alt="interracial-coluple"
+                  alt="Google Badge"
                   />
                    <Image
                    className="white"
                   src={'../images/white.png'}
-                  alt="interracial-coluple"
+                  alt="Google Badge"
                  />
           
         </Button>
