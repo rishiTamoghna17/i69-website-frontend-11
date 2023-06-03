@@ -1,3 +1,3 @@
 export default {
-    'title': 'React French'
+    'search': 'RECHERCHE DE PERSONNES À PROXIMITÉ'
 };

@@ -8,6 +8,7 @@ const LayoutDefault = (props) => {
   const { children } = props
   // redux 
   const { set_user_value_from_localstorage, signup, uid } = props
+  console.log('uid',uid)
 
   useEffect(() => {
     let userInfo = {

@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
+import { useTranslation } from 'react-i18next';
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -22,7 +23,7 @@ const FeaturesTiles = ({
   pushLeft,
   ...props
 }) => {
-
+  const { t } = useTranslation()
   const outerClasses = classNames(
     'features-tiles section',
     topOuterDivider && 'has-top-divider',
@@ -44,8 +45,8 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: 'SEARCH FOR PEOPLE NEARBY',
-    paragraph: 'or by distance!'
+    title: t('Home.peopleSearch'),
+    paragraph: t('Home.distance')
   };
 
   return (
@@ -71,10 +72,10 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    NEARBY
+                    {t('Home.nearBy')}
                     </h4>
                   <p className="m-0 text-sm">
-                    Meet and chat with people nearby now
+                    {t('Home.meetAndChat')}
                     </p>
                 </div>
               </div>
@@ -93,10 +94,10 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    LOCATION
+                    {t('Home.location')}
                     </h4>
                   <p className="m-0 text-sm">
-                  The app shows people with whom you are close in realtime at your current location
+                  {t('Home.realtimeLocation')}
                     </p>
                 </div>
               </div>
@@ -115,10 +116,10 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    ALL OVER THE WORLD
+                    {t('Home.allOver')}
                     </h4>
                   <p className="m-0 text-sm">
-                  Socialize with girls and guys from all over the world: chat with charming , Cute , Smart and Hot women.
+                    {t('Home.socialisez')}
                     </p>
                 </div>
               </div>

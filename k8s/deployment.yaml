@@ -22,8 +22,6 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
-      imagePullSecrets:
-      - name: i69
 ---
 apiVersion: v1
 kind: Service

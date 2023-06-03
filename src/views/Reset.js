@@ -23,6 +23,7 @@ import firebaseConfig from '../common/firebaseConfig';
 // Add the Firebase services that you want to use
 import "firebase/auth";
 import "firebase/firestore";
+import { useTranslation, withTranslation } from "react-i18next";
 class Reset extends Component {
   state = {
     email: "",
@@ -76,7 +77,7 @@ class Reset extends Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const { classes,t } = this.props;
     return (
       <div className={classes.main}>
         {/* <CssBaseline /> */}
@@ -89,7 +90,7 @@ class Reset extends Component {
           >
             <FormControl required fullWidth margin="normal">
               <InputLabel htmlFor="email" className={classes.labels}>
-                Email
+              {t('Reset.email')}
               </InputLabel>
               <Input
                 name="email"
@@ -110,7 +111,7 @@ class Reset extends Component {
               type="submit"
               onClick={this.reset}
             >
-              Send me a reset link
+              {t('Reset.resetLink')}
             </Button>
           </form>
           {this.state.error ? (
@@ -152,5 +153,5 @@ class Reset extends Component {
     );
   }
 }
-
-export default withStyles(register)(Reset);
+const resetComponents= withStyles(register)(Reset)
+export default withTranslation()(resetComponents) ;
