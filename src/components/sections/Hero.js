@@ -131,6 +131,7 @@ function Hero(props) {
         </div>
       </div>
     </Carousel >
+   
 
   )
 }

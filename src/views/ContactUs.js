@@ -94,7 +94,9 @@ const ContactUs = () => {
       message: "",
     },
   });
-  const apiHost = "https://api.chatadmin-mod.click/api/contact-us/";
+  // const apiHost = "https://api.chatadmin-mod.click/api/contact-us/";
+  const apiHost = "https://api.i69app.com/api/contact-us/";
+  
   const Api = Object.freeze({
     defaultHeaders: {
       "Content-Type": "application/json",

@@ -94,6 +94,7 @@ class Login extends Component {
     //dispath to userActions
   };
 
+
   loginWithGoogle = e => {
     e.preventDefault();
 
@@ -143,6 +144,7 @@ class Login extends Component {
     //dispath to userActions
   };
 
+
   loginWithFacebook = e => {
     e.preventDefault();
 
@@ -177,7 +179,7 @@ class Login extends Component {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
-        // alert(errorMessage)
+        alert(errorMessage)
         // ...
       });
 
@@ -231,7 +233,7 @@ class Login extends Component {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
-        // alert(errorMessage)
+        alert(errorMessage)
         // ...
       });
 

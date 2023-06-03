@@ -112,7 +112,11 @@ const Terms = () => {
           <p>28. {t('Terms.frenchLaw')}</p>
         </Grid>
         <Grid item xs={12} sm={2}>
+<<<<<<< HEAD
           <Button variant="contained" style={{ margin: 50 }} color="secondary" href="https://play.google.com/store/apps/details?id=com.i69.isyxtinine" target="_blank">
+=======
+          <Button variant="contained" style={{ margin: 50 }} color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app&pli=1" target="_blank">
+>>>>>>> 136ba71321dee0c50c1d48eedae06c95a909a1e2
             {t('Home.download')}
           </Button>
         </Grid>
