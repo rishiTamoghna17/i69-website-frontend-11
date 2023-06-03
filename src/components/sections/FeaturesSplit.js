@@ -78,7 +78,7 @@ const FeaturesSplit = ({
                 <p className="m-0">
                   {t('Home.goodPlace')}
                   </p>
-                <Button variant="contained" style={{ margin: 50}}  color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app" target="_blank">
+                <Button variant="contained" style={{ margin: 50}}  color="secondary" href="https://play.google.com/store/apps/details?id=com.i69.isyxtinine" target="_blank">
                   {t('Home.download')}
                 </Button>
               </div>
@@ -110,7 +110,7 @@ const FeaturesSplit = ({
                   {t('Home.createProfile')}
                   {t('Home.improvedCommunication')}
                   </p>
-                <Button variant="contained" style={{ margin: 50}} color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app" target="_blank">
+                <Button variant="contained" style={{ margin: 50}} color="secondary" href="https://play.google.com/store/apps/details?id=com.i69.isyxtinine" target="_blank">
                 {t('Home.download')}
                 </Button>
               </div>
@@ -147,7 +147,7 @@ const FeaturesSplit = ({
                   {t('Home.attachCopy')}
 
                   </p>
-                <Button variant="contained"  style={{ margin: 50}}  color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app" target="_blank">
+                <Button variant="contained"  style={{ margin: 50}}  color="secondary" href="https://play.google.com/store/apps/details?id=com.i69.isyxtinine" target="_blank">
                 {t('Home.download')}
                 </Button>
               </div>
@@ -185,7 +185,7 @@ const FeaturesSplit = ({
                   {t('Homw.newFriends')}
                   {t('Home.filtersAppearance')}
                   </p>
-                <Button variant="contained"  style={{ margin: 50}} color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app" target="_blank">
+                <Button variant="contained"  style={{ margin: 50}} color="secondary" href="https://play.google.com/store/apps/details?id=com.i69.isyxtinine" target="_blank">
                 {t('Home.download')}
                 </Button>
               </div>

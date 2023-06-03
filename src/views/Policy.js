@@ -123,7 +123,7 @@ const Policy = () => {
           <p>{t('Policy.businessStructure')}</p>
         </Grid>
         <Grid item xs={12} sm={2}>
-          <Button variant="contained" style={{ margin: 50 }} color="secondary" href="https://play.google.com/store/apps/details?id=com.i69app.i69app" target="_blank">
+          <Button variant="contained" style={{ margin: 50 }} color="secondary" href="https://play.google.com/store/apps/details?id=com.i69.isyxtinine" target="_blank">
             {t('Home.download')}
           </Button>
         </Grid>

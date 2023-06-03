@@ -40,7 +40,7 @@ const Home = () => {
             zIndex: 1,
             padding: "0",
           }}
-          href="https://play.google.com/store/apps/details?id=com.i69app.i69app&pli=1"
+          href="https://play.google.com/store/apps/details?id=com.i69.isyxtinine&pli=1"
           target="_blank"
         >
           <Image
