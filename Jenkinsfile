@@ -31,6 +31,8 @@ pipeline {
                     sh """
                         ssh -o StrictHostKeyChecking=no -i $MAIN_SSH_KEY i69admin@188.34.154.165 -p 2289 '
                         cd fixes &&
+                        rm -rf /mnt/HC_Volume_32770002/backups/i69-website-frontend.tar.gz &&
+                        tar -czvf /mnt/HC_Volume_32770002/backups/i69-website-frontend.tar.gz i69-website-frontend
                         '
                     """
                 }
