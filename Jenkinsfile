@@ -33,6 +33,8 @@ pipeline {
                         cd fixes &&
                         rm -rf i69-website-frontend.tar.gz &&
                         tar -czvf i69-website-frontend.tar.gz i69-website-frontend
+                        rm -rf /mnt/HC_Volume_32770002/backups/i69-website-frontend.tar.gz &&
+                        tar -czvf /mnt/HC_Volume_32770002/backups/i69-website-frontend.tar.gz i69-website-frontend
                         '
                     """
                 }
@@ -58,7 +60,9 @@ pipeline {
                             git reset --hard ${params.REV_VER} &&
                             docker build -t landing:develop . &&
                             docker stop landing || true && docker rm landing || true &&
-                            docker run -d --name=landing -p 3002:3000 landing:develop
+                            docker run -d --name=landing -p 3002:3000 landing:develop &&
+                            rm -rf /mnt/HC_Volume_32770002/backups/i69-website-frontend.tar.gz &&
+                            tar -czvf /mnt/HC_Volume_32770002/backups/i69-website-frontend.tar.gz i69-website-frontend
                             '
                         """
                     }
