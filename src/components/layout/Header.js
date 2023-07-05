@@ -18,6 +18,7 @@ import {
 import { logout_user } from "../../../redux/actions/user";
 import { connect } from "react-redux";
 import { LanguageArray } from "../../utils/SectionProps";
+import { getClientIpDetails} from "../../Actions";
 
 const propTypes = {
   navposition: PropTypes.string,
@@ -51,7 +52,7 @@ const Header = (props) => {
   // redux action
   const { i18n, t } = useTranslation();
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
-  const [language, setLanguage] = React.useState("");
+  const [language, setLanguage] = React.useState("En");
 
   const handleChange = (e) => {
     setLanguage(e.target.value);
@@ -62,6 +63,22 @@ const Header = (props) => {
 
   const nav = useRef(null);
   const hamburger = useRef(null);
+
+  const selectCountry = (languages) => {
+    const language = languages?.split(",")[0]?.toLowerCase()
+    const getLang = LanguageArray.find((lang) => lang.value === language) || { label: "En", value: "en" };
+    if(getLang) {
+      // i18n.changeLanguage(getLang.label);
+      setLanguage(getLang.label);
+    }
+  }
+
+  useEffect(() => {
+    getClientIpDetails().then(({data})=>{
+      data && selectCountry(data.languages)
+    })
+  },[])
+
 
   useEffect(() => {
     isActive && openMenu();
