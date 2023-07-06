@@ -48,7 +48,7 @@
     "url": "https://github.com/cruip/open-react-template.git"
   },
   "scripts": {
-    "dev": "next -p 3003",
+    "dev": "next -p 3000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
